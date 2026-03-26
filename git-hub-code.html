@@ -1,0 +1,4132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+    span.s2 {font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s3 {text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0000e9}
+    span.s4 {font: 12.0px 'Times New Roman'; font-kerning: none}
+    span.s5 {font: 12.0px 'Zapf Dingbats'; font-kerning: none}
+    td.td1 {width: 1034.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+  </style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;html lang="es"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;head&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;meta charset="UTF-8"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;title&gt;Generador de Propuestas Computec&lt;/title&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;style&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">*{box-sizing:border-box;margin:0;padding:0;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">body{font-family:'DM Sans',Arial,sans-serif;background:#f5f7f5;color:#001D21;min-height:100vh;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.topbar{background:#001D21;padding:14px 32px;display:flex;align-items:center;gap:12px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.topbar-logo{color:#13C37A;font-size:18px;font-weight:700;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.topbar-sub{color:#ffffff88;font-size:13px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.container{max-width:860px;margin:0 auto;padding:2rem 1.5rem;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.card{background:#fff;border-radius:12px;border:0.5px solid #e0e8e3;padding:2rem;margin-bottom:1.5rem;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.steps{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2rem;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.step-pill{padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;border:1.5px solid #d0ddd5;color:#5a7a6a;background:#fff;transition:all 0.15s;white-space:nowrap;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.step-pill.active{background:#13C37A;color:#001D21;border-color:#13C37A;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.step-pill.done{background:#e8f7ef;color:#0a7a4a;border-color:#13C37A99;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.panel{display:none;}.panel.active{display:block;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.section-title{font-size:17px;font-weight:700;color:#001D21;margin-bottom:4px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.section-desc{font-size:13px;color:#5a7a6a;margin-bottom:1.5rem;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:1.25rem;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.form-grid.single{grid-template-columns:1fr;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.field{display:flex;flex-direction:column;gap:5px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.field label{font-size:12px;font-weight:600;color:#3a5a4a;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.field input,.field select,.field textarea{font-size:13px;padding:9px 12px;border-radius:8px;border:1.5px solid #d0ddd5;background:#fff;color:#001D21;width:100%;transition:border 0.15s;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:#13C37A;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.field textarea{min-height:80px;resize:vertical;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.linea-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:1.5rem;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.linea-card{padding:16px;border-radius:10px;border:1.5px solid #d0ddd5;cursor:pointer;transition:all 0.15s;background:#fff;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.linea-card:hover{border-color:#13C37A;background:#f0fdf5;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.linea-card.selected{border-color:#13C37A;background:#e8f7ef;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.linea-badge{display:inline-block;padding:3px 10px;border-radius:10px;font-size:10px;font-weight:700;margin-bottom:8px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.b1{background:#001D2118;color:#001D21;}.b2{background:#13C37A22;color:#0a7a4a;}.b3{background:#378ADD22;color:#185FA5;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.linea-name{font-size:14px;font-weight:700;color:#001D21;margin-bottom:4px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.linea-desc{font-size:11px;color:#5a7a6a;line-height:1.5;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.sub-sol{display:none;margin-bottom:1.25rem;}.sub-sol.visible{display:block;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.sub-card{padding:10px 12px;border-radius:8px;border:1.5px solid #d0ddd5;cursor:pointer;font-size:12px;font-weight:600;color:#001D21;background:#fff;transition:all 0.15s;text-align:left;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.sub-card:hover{border-color:#13C37A;}.sub-card.selected{border-color:#13C37A;background:#e8f7ef;color:#0a7a4a;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.canales-box{background:#f9fdf9;border:1px solid #e0e8e3;border-radius:8px;padding:10px 14px;margin-bottom:1rem;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.canales-title{font-size:12px;font-weight:700;color:#3a5a4a;margin-bottom:8px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.canal-check{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#001D21;cursor:pointer;margin:3px 8px 3px 0;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.canal-check input{accent-color:#13C37A;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.fase-item{display:grid;grid-template-columns:2fr 1fr auto;gap:8px;align-items:center;margin-bottom:8px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.fase-del{padding:7px 11px;border-radius:8px;border:1.5px solid #d0ddd5;background:#f5f7f5;color:#5a7a6a;cursor:pointer;font-size:12px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.add-btn{font-size:12px;color:#0a7a4a;cursor:pointer;border:none;background:none;padding:4px 0;font-weight:700;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.btn-primary{padding:10px 26px;border-radius:8px;background:#13C37A;color:#001D21;font-size:13px;font-weight:700;border:none;cursor:pointer;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.btn-primary:hover{background:#0fa86a;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.btn-secondary{padding:10px 22px;border-radius:8px;background:#f5f7f5;color:#001D21;font-size:13px;font-weight:600;border:1.5px solid #d0ddd5;cursor:pointer;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.nav-row{display:flex;justify-content:space-between;align-items:center;margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid #e8f0ec;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.subsection{margin-bottom:1.25rem;padding:1rem 1.25rem;border-radius:10px;border:1px solid #e0e8e3;background:#f9fdf9;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.subsection-title{font-size:13px;font-weight:700;color:#001D21;margin-bottom:10px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.checkbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.check-item{display:flex;align-items:center;gap:8px;font-size:12px;color:#001D21;cursor:pointer;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.check-item input[type=checkbox]{width:15px;height:15px;cursor:pointer;accent-color:#13C37A;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.tag-req{display:inline-block;padding:1px 7px;border-radius:8px;font-size:10px;font-weight:700;background:#fff0f0;color:#d04040;margin-left:5px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.tag-opt{display:inline-block;padding:1px 7px;border-radius:8px;font-size:10px;font-weight:600;background:#f0f0f0;color:#5a7a6a;margin-left:5px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.terminos-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.preview-doc{background:#fff;border:1px solid #e0e8e3;border-radius:10px;padding:2rem;font-size:13px;line-height:1.8;color:#001D21;max-height:540px;overflow-y:auto;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.preview-doc h1{font-size:20px;font-weight:700;margin-bottom:8px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.preview-doc h2{font-size:14px;font-weight:700;margin:1.25rem 0 6px;color:#0a7a4a;border-bottom:1.5px solid #13C37A44;padding-bottom:4px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.preview-doc p{margin-bottom:8px;}.preview-doc ul{margin:6px 0 10px 18px;}.preview-doc li{margin-bottom:4px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.preview-doc .mt{width:100%;border-collapse:collapse;margin-bottom:1rem;font-size:12px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.preview-doc .mt td{padding:6px 10px;border:1px solid #e0e8e3;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.preview-doc .mt td:first-child{font-weight:700;background:#f5f7f5;width:35%;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.preview-doc .it{width:100%;border-collapse:collapse;margin:8px 0;font-size:12px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.preview-doc .it th{background:#13C37A;color:#001D21;padding:7px 10px;text-align:left;font-weight:700;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.preview-doc .it td{padding:6px 10px;border-bottom:1px solid #e8f0ec;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.preview-tag{display:inline-block;padding:4px 12px;border-radius:12px;font-size:11px;font-weight:700;background:#13C37A;color:#001D21;margin-bottom:14px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.prompt-area{background:#f5f7f5;border:1.5px solid #d0ddd5;border-radius:10px;padding:1.25rem;margin-bottom:1rem;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.prompt-text{font-size:11px;color:#001D21;line-height:1.7;background:#fff;padding:12px;border-radius:8px;border:1px solid #e0e8e3;white-space:pre-wrap;max-height:340px;overflow-y:auto;font-family:monospace;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.info-box{background:#e8f7ef;border:1px solid #13C37A66;border-radius:10px;padding:1rem 1.25rem;margin-bottom:1rem;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.info-box-title{font-size:13px;font-weight:700;color:#0a7a4a;margin-bottom:5px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.info-box-steps{font-size:12px;color:#1a5a3a;line-height:1.9;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.copy-btn{padding:10px 20px;border-radius:8px;background:#13C37A;color:#001D21;font-size:12px;font-weight:700;border:none;cursor:pointer;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.copy-btn:hover{background:#0fa86a;}.copy-btn.copied{background:#e8f7ef;color:#0a7a4a;border:1.5px solid #13C37A;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.copy-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1.5rem;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.progress-bar{height:4px;background:#e0e8e3;border-radius:2px;margin-bottom:1.5rem;overflow:hidden;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.progress-fill{height:100%;background:#13C37A;border-radius:2px;transition:width 0.3s;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">.hint{font-size:11px;color:#5a7a6a;font-style:italic;margin-top:4px;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">@keyframes spin{to{transform:rotate(360deg);}}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">@media(max-width:640px){.form-grid{grid-template-columns:1fr;}.linea-grid{grid-template-columns:1fr;}.sub-grid,.checkbox-grid,.terminos-grid{grid-template-columns:1fr 1fr;}.fase-item{grid-template-columns:1fr auto;}}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/style&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s2">&lt;link href="<a href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&amp;display=swap"><span class="s3">https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&amp;display=swap</span></a>" rel="stylesheet"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;body&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="topbar"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="topbar-logo"&gt;&amp;#9643; Computec&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="topbar-sub"&gt;Generador de Propuestas Comerciales&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="container"&gt;&lt;div class="card"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="steps"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="step-pill active" id="pill-1" onclick="goStep(1)"&gt;1 · Cliente&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="step-pill" id="pill-2" onclick="goStep(2)"&gt;2 · Solución&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="step-pill" id="pill-3" onclick="goStep(3)"&gt;3 · Inversión&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="step-pill" id="pill-4" onclick="goStep(4)"&gt;4 · Extras&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="step-pill" id="pill-5" onclick="goStep(5)"&gt;5 · Fases&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="step-pill" id="pill-6" onclick="goStep(6)"&gt;6 · Términos&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="step-pill" id="pill-7" onclick="goStep(7)"&gt;7 · Vista previa&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="step-pill" id="pill-8" onclick="goStep(8)"&gt;8 · Prompt&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="progress-bar"&gt;&lt;div class="progress-fill" id="progress" style="width:12.5%;"&gt;&lt;/div&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;!-- P1 CLIENTE --&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="panel active" id="panel-1"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="section-title"&gt;Datos del cliente&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="section-desc"&gt;Información básica de la empresa y el contacto decisor&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="form-grid"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Empresa cliente &lt;span class="tag-req"&gt;requerido&lt;/span&gt;&lt;/label&gt;&lt;input type="text" id="empresa" placeholder="Ej. Recuperacall Solutions"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Sector / industria &lt;span class="tag-req"&gt;requerido&lt;/span&gt;&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;select id="sector"&gt;&lt;option value=""&gt;Seleccionar...&lt;/option&gt;&lt;option&gt;Educación&lt;/option&gt;&lt;option&gt;Banca y finanzas&lt;/option&gt;&lt;option&gt;Pensiones y cesantías&lt;/option&gt;&lt;option&gt;Cobranza y cartera&lt;/option&gt;&lt;option&gt;Salud&lt;/option&gt;&lt;option&gt;Retail y comercio&lt;/option&gt;&lt;option&gt;Telecomunicaciones&lt;/option&gt;&lt;option&gt;Gobierno&lt;/option&gt;&lt;option&gt;Industria y manufactura&lt;/option&gt;&lt;option&gt;Tecnología&lt;/option&gt;&lt;option&gt;Servicios profesionales&lt;/option&gt;&lt;option&gt;Otro&lt;/option&gt;&lt;/select&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Nombre del contacto &lt;span class="tag-req"&gt;requerido&lt;/span&gt;&lt;/label&gt;&lt;input type="text" id="contacto" placeholder="Ej. Edward Pérez"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Cargo del contacto&lt;/label&gt;&lt;input type="text" id="cargo" placeholder="Ej. Gerente de Operaciones"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Comercial Computec &lt;span class="tag-req"&gt;requerido&lt;/span&gt;&lt;/label&gt;&lt;input type="text" id="comercial" placeholder="Tu nombre completo"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Email / teléfono comercial&lt;/label&gt;&lt;input type="text" id="emailcomercial" placeholder="tucorreo@computec.com / +57311..."&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="form-grid single"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Contexto y necesidad del cliente &lt;span class="tag-req"&gt;requerido&lt;/span&gt;&lt;/label&gt;&lt;textarea id="contexto" placeholder="Describe el problema o necesidad real. Ej: Fragmentación en canales, falta de trazabilidad, proceso manual que no escala, rechazos de la DIAN, correos que no llegan..."&gt;&lt;/textarea&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Antecedente, piloto o proyecto previo &lt;span class="tag-opt"&gt;si aplica&lt;/span&gt;&lt;/label&gt;&lt;textarea id="piloto" placeholder="Ej: Piloto ejecutado entre nov/25 y ene/26. Resultados validados en producción." style="min-height:56px;"&gt;&lt;/textarea&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="nav-row"&gt;&lt;span&gt;&lt;/span&gt;&lt;button class="btn-primary" onclick="goStep(2)"&gt;Siguiente </span><span class="s4">→</span><span class="s1">&lt;/button&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;!-- P2 SOLUCIÓN --&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="panel" id="panel-2"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="section-title"&gt;Línea de solución&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="section-desc"&gt;Selecciona la línea principal y luego la solución específica&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="linea-grid"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="linea-card" onclick="selLinea(this,'conv')"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="linea-badge b1"&gt;Crecimiento Conversacional&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="linea-name"&gt;Agentes de IA y Chatbots&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="linea-desc"&gt;Cobranza automatizada, atención al cliente, chatbots, agentes de IA generativa, interacción 24/7&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="linea-card" onclick="selLinea(this,'com')"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="linea-badge b2"&gt;Comunicaciones Conectadas&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="linea-name"&gt;Voz, Mensajería y Omnicanalidad&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="linea-desc"&gt;WhatsApp Business, voz, videollamadas, SMS, email, omnicanalidad, integración con CRM y Odoo&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="linea-card" onclick="selLinea(this,'doc')"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="linea-badge b3"&gt;Documentos Inteligentes&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="linea-name"&gt;Radar 2.0, Extractos y Facturación&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="linea-desc"&gt;Extractos masivos, facturación electrónica, almacenamiento, SMS y email transaccional, generación documental&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;!-- Sub-soluciones CONV --&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-sol" id="sub-conv" style="display:none;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p style="font-size:12px;font-weight:700;color:#3a5a4a;margin-bottom:8px;"&gt;¿Qué solución específica vas a proponer?&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-grid"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Agente de IA para Cobranza')"&gt;Agente de IA para Cobranza&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Agente de IA para Atención al Cliente')"&gt;Agente de IA Atención al Cliente&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Chatbot Conversacional')"&gt;Chatbot Conversacional&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Agente de IA Generativa')"&gt;Agente de IA Generativa&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Automatización de Campañas Conversacionales')"&gt;Automatización de Campañas&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Otra — especificar abajo')"&gt;Otra — especificar abajo&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="canales-box"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="canales-title"&gt;Canales incluidos en esta solución&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-conv-wa" checked&gt; WhatsApp Business&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-conv-voz"&gt; Voz (escalamiento humano)&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-conv-sms"&gt; SMS (notificaciones)&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;!-- Sub-soluciones COM --&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-sol" id="sub-com" style="display:none;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p style="font-size:12px;font-weight:700;color:#3a5a4a;margin-bottom:8px;"&gt;¿Qué solución específica vas a proponer?&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-grid"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Integración Voz y WhatsApp con Odoo')"&gt;Integración Voz + WhatsApp con Odoo&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Comunicaciones Inteligentes Omnicanal')"&gt;Comunicaciones Inteligentes Omnicanal&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'WhatsApp Business API')"&gt;WhatsApp Business API&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Voz y Videollamadas')"&gt;Voz y Videollamadas&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Integración con CRM')"&gt;Integración con CRM&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Encuestas y Satisfacción al Cliente')"&gt;Encuestas y Satisfacción&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Otra — especificar abajo')"&gt;Otra — especificar abajo&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="canales-box"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="canales-title"&gt;Canales incluidos en esta solución&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-com-wa"&gt; WhatsApp Business&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-com-voz"&gt; Voz / llamadas&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-com-video"&gt; Videollamadas&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-com-sms"&gt; SMS&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-com-email"&gt; Email / correo&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;!-- Sub-soluciones DOC --&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-sol" id="sub-doc" style="display:none;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p style="font-size:12px;font-weight:700;color:#3a5a4a;margin-bottom:8px;"&gt;¿Qué solución específica vas a proponer?&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-grid"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Extractos y Comunicaciones Masivas')"&gt;Extractos y Comunicaciones Masivas&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Radar 2.0 — Gestión Documental')"&gt;Radar 2.0 — Gestión Documental&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Facturación Electrónica')"&gt;Facturación Electrónica&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Configuración de Mapper / Reglas de Negocio')"&gt;Configuración de Mapper / Reglas&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Almacenamiento y Custodia Documental')"&gt;Almacenamiento y Custodia&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'SMS Documental e Inteligente')"&gt;SMS Documental e Inteligente&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Email Transaccional Masivo')"&gt;Email Transaccional Masivo&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="sub-card" onclick="selSub(this,'Otra — especificar abajo')"&gt;Otra — especificar abajo&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="canales-box"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="canales-title"&gt;Canales de distribución incluidos&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-doc-email"&gt; Email / correo&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-doc-sms"&gt; SMS&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-doc-fisico"&gt; Físico (impresión)&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-doc-portal"&gt; Portal web / consulta online&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div id="alcance-extra" style="display:none;margin-top:1rem;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="form-grid single"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Descripción específica del alcance &lt;span class="tag-opt"&gt;opcional&lt;/span&gt;&lt;/label&gt;&lt;textarea id="alcance" placeholder="Describe módulos, configuraciones o características específicas que incluye esta propuesta."&gt;&lt;/textarea&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Diferenciadores y beneficios clave para este cliente&lt;/label&gt;&lt;textarea id="beneficios" placeholder="Ej: Trazabilidad jurídica 360°, disponibilidad 24/7, cumplimiento DIAN, encriptación de datos sensibles..." style="min-height:60px;"&gt;&lt;/textarea&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="nav-row"&gt;&lt;button class="btn-secondary" onclick="goStep(1)"&gt;</span><span class="s4">←</span><span class="s1"> Atrás&lt;/button&gt;&lt;button class="btn-primary" onclick="goStep(3)"&gt;Siguiente </span><span class="s4">→</span><span class="s1">&lt;/button&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;!-- P3 INVERSIÓN --&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="panel" id="panel-3"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="section-title"&gt;Inversión&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="section-desc"&gt;Selecciona el tipo de cobro e ingresa los valores negociados — cada propuesta es diferente&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="subsection"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="subsection-title"&gt;¿Qué tipo de cobro incluye esta propuesta?&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="checkbox-grid"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="tipo-onetime" onchange="togInv()"&gt; One Time — Implementación&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="tipo-horas" onchange="togInv()"&gt; Por horas de ingeniero&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="tipo-recurrente" onchange="togInv()"&gt; Recurrencia mensual&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="tipo-unitario" onchange="togInv()"&gt; Por volumen / unitario&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="tipo-campana" onchange="togInv()"&gt; Por campaña o proyecto puntual&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div id="inv-onetime" style="display:none;" class="subsection"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="subsection-title"&gt;One Time — Implementación&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="form-grid"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Valor total (COP)&lt;/label&gt;&lt;input type="text" id="val-onetime" placeholder="Ej. $20.000.000"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Descripción&lt;/label&gt;&lt;input type="text" id="desc-onetime" placeholder="Ej. Integración técnica + configuración inicial"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div id="inv-horas" style="display:none;" class="subsection"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="subsection-title"&gt;Por horas de ingeniero&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="form-grid"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Cantidad de horas&lt;/label&gt;&lt;input type="number" id="horas-proy" placeholder="Ej. 13" min="0"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Valor por hora (COP, antes de IVA)&lt;/label&gt;&lt;input type="text" id="valor-hora-proy" placeholder="Ej. $124.136 o $195.000"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="form-grid"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Valor total del proyecto (COP)&lt;/label&gt;&lt;input type="text" id="val-total-horas" placeholder="Se calcula: horas × valor hora"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Descripción del trabajo&lt;/label&gt;&lt;input type="text" id="desc-horas" placeholder="Ej. Incluye pruebas y puesta en producción"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="hint"&gt;Ej: 13 horas × $124.136 = $1.416.000 antes de IVA&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div id="inv-recurrente" style="display:none;" class="subsection"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="subsection-title"&gt;Recurrencia mensual&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="form-grid"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Nombre del plan&lt;/label&gt;&lt;input type="text" id="nombre-plan" placeholder="Ej. Scale 8K / Plan 6K / Plan Base"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Valor mensual (COP)&lt;/label&gt;&lt;input type="text" id="val-mensual" placeholder="Ej. $16.000.000"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Descripción del plan&lt;/label&gt;&lt;input type="text" id="desc-plan" placeholder="Ej. Hasta 8.000 usuarios / 48.000 mensajes"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Vigencia del contrato&lt;/label&gt;&lt;select id="vigencia"&gt;&lt;option value="12 meses"&gt;12 meses&lt;/option&gt;&lt;option value="24 meses"&gt;24 meses&lt;/option&gt;&lt;option value="36 meses"&gt;36 meses&lt;/option&gt;&lt;option value="A definir"&gt;A definir&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div id="inv-unitario" style="display:none;" class="subsection"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="subsection-title"&gt;Por volumen / unitario&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div id="items-unitarios"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;button class="add-btn" onclick="addItem()"&gt;+ Agregar concepto&lt;/button&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="hint" style="margin-top:6px;"&gt;Ej: Email 1–20.000 = $130.000 · SMS básico 1–50.000 = $340.000 · Procesamiento por documento = $70&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div id="inv-campana" style="display:none;" class="subsection"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="subsection-title"&gt;Por campaña o proyecto puntual&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="form-grid"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Valor total (COP)&lt;/label&gt;&lt;input type="text" id="val-campana" placeholder="Ej. $900.000"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Descripción&lt;/label&gt;&lt;input type="text" id="desc-campana" placeholder="Ej. Campaña encuestas 44h / 170–200 registros"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="form-grid" style="margin-top:1rem;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Forma de pago&lt;/label&gt;&lt;input type="text" id="pago" placeholder="Ej. 30 días / 60 días después de facturación"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Facturación&lt;/label&gt;&lt;select id="facturacion"&gt;&lt;option&gt;Mensual&lt;/option&gt;&lt;option&gt;Por hito&lt;/option&gt;&lt;option&gt;Al inicio del proyecto&lt;/option&gt;&lt;option&gt;Única&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="form-grid single"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Beneficios comerciales negociados &lt;span class="tag-opt"&gt;opcional&lt;/span&gt;&lt;/label&gt;&lt;textarea id="beneficios-com" placeholder="Ej: 12 meses por 11 pagos / Implementación sin costo / 30h consultoría incluidas / SMS básicos incluidos..." style="min-height:56px;"&gt;&lt;/textarea&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Notas adicionales sobre la inversión &lt;span class="tag-opt"&gt;opcional&lt;/span&gt;&lt;/label&gt;&lt;input type="text" id="notas-inv" placeholder="Ej. Los valores no incluyen IVA. Las horas adicionales fuera del alcance se cobran por separado."&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="nav-row"&gt;&lt;button class="btn-secondary" onclick="goStep(2)"&gt;</span><span class="s4">←</span><span class="s1"> Atrás&lt;/button&gt;&lt;button class="btn-primary" onclick="goStep(4)"&gt;Siguiente </span><span class="s4">→</span><span class="s1">&lt;/button&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;!-- P4 EXTRAS --&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="panel" id="panel-4"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="section-title"&gt;Servicios adicionales&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="section-desc"&gt;Soporte y servicios de valor agregado incluidos en esta propuesta&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="subsection"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="subsection-title"&gt;Soporte incluido en el plan&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="checkbox-grid"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="sop-tecnico" checked&gt; Soporte técnico L-V 8am–5pm&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="sop-ejecutivo" checked&gt; Ejecutivo de cuenta dedicado&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="sop-capacitacion" checked&gt; Capacitación continua&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="sop-dashboard"&gt; Dashboard de reportería&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="sop-monitoreo"&gt; Monitoreo activo del servicio&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="sop-24h"&gt; Hasta 24h mensuales de optimización&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="subsection"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="subsection-title"&gt;Servicios de valor agregado &lt;span class="tag-opt"&gt;si aplica&lt;/span&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="checkbox-grid"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="va-plantillas"&gt; Diseño de plantillas personalizadas&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="va-limpieza"&gt; Limpieza y reputación de sender&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="va-migracion"&gt; Migración de datos o plantillas&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="va-guias"&gt; Guías digitales certificadas&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="va-almacenamiento"&gt; Almacenamiento online 24/7&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="va-qr"&gt; Botones de pago / QR en plantillas&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="va-pruebas"&gt; Pruebas ante ente regulador (DIAN)&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="va-produccion"&gt; Puesta en producción incluida&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field" style="margin-top:8px;"&gt;&lt;label&gt;Otros servicios incluidos &lt;span class="tag-opt"&gt;opcional&lt;/span&gt;&lt;/label&gt;&lt;input type="text" id="otros-servicios" placeholder="Ej. Laboratorio WhatsApp, consultoría sin costo, acceso a equipo de diseño..."&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="nav-row"&gt;&lt;button class="btn-secondary" onclick="goStep(3)"&gt;</span><span class="s4">←</span><span class="s1"> Atrás&lt;/button&gt;&lt;button class="btn-primary" onclick="goStep(5)"&gt;Siguiente </span><span class="s4">→</span><span class="s1">&lt;/button&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;!-- P5 FASES --&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="panel" id="panel-5"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="section-title"&gt;Fases y cronograma&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="section-desc"&gt;Se cargan automáticamente según la línea seleccionada. Edita según el cliente.&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div id="fases-container"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;button class="add-btn" onclick="addFase()"&gt;+ Agregar fase&lt;/button&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="form-grid" style="margin-top:1.25rem;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Fecha de inicio estimada&lt;/label&gt;&lt;input type="text" id="fecha-inicio" placeholder="Ej. 01-04-2026"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Tiempo total estimado&lt;/label&gt;&lt;input type="text" id="tiempo-total" placeholder="Ej. 2–3 semanas desde aprobación"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="form-grid single"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Próximos pasos para cerrar el negocio &lt;span class="tag-opt"&gt;opcional&lt;/span&gt;&lt;/label&gt;&lt;textarea id="proximos-pasos" placeholder="Ej. 1. Reunión de validación. 2. Aprobación y firma. 3. Kick-off con equipos." style="min-height:60px;"&gt;&lt;/textarea&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="nav-row"&gt;&lt;button class="btn-secondary" onclick="goStep(4)"&gt;</span><span class="s4">←</span><span class="s1"> Atrás&lt;/button&gt;&lt;button class="btn-primary" onclick="goStep(6)"&gt;Siguiente </span><span class="s4">→</span><span class="s1">&lt;/button&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;!-- P6 TÉRMINOS --&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="panel" id="panel-6"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="section-title"&gt;Términos de la oferta&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="section-desc"&gt;Condiciones comerciales estándar — ajusta según la negociación&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="terminos-grid"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Vigencia de la oferta&lt;/label&gt;&lt;input type="text" id="vig-oferta" value="15 días hábiles"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Fecha de inicio del servicio&lt;/label&gt;&lt;input type="text" id="inicio-servicio" placeholder="Ej. 01-04-2026 / Una vez aprobada la propuesta"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Suspensión por mora&lt;/label&gt;&lt;input type="text" id="mora" value="Mora superior a 30 días"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Incremento tarifario anual&lt;/label&gt;&lt;input type="text" id="incremento" value="IPC del año correspondiente"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="subsection" style="margin-top:1rem;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="subsection-title"&gt;Condiciones estándar a incluir&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="checkbox-grid"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-iva" checked&gt; Valores no incluyen IVA&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-propiedad" checked&gt; Propiedad intelectual: Computec&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-datos" checked&gt; Titularidad de datos: del cliente&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-renovacion" checked&gt; Renovación automática (aviso 30 días)&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-terminacion" checked&gt; Cláusula de terminación anticipada&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-fuerza" checked&gt; Exoneración por fuerza mayor&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-ley" checked&gt; Ley colombiana / Bogotá D.C.&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-ajustes" checked&gt; Ajustes de alcance se cotizan aparte&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-1581" checked&gt; Cumplimiento Ley 1581&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-escala"&gt; Escalabilidad automática de consumo&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-pruebas"&gt; Requiere etapa de pruebas del cliente&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="form-grid single" style="margin-top:1rem;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;&lt;label&gt;Condiciones especiales de esta negociación &lt;span class="tag-opt"&gt;opcional&lt;/span&gt;&lt;/label&gt;&lt;textarea id="obs-adicionales" placeholder="Ej. Las horas adicionales fuera del alcance se costearán con el formato de requerimientos histórico." style="min-height:56px;"&gt;&lt;/textarea&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="nav-row"&gt;&lt;button class="btn-secondary" onclick="goStep(5)"&gt;</span><span class="s4">←</span><span class="s1"> Atrás&lt;/button&gt;&lt;button class="btn-primary" onclick="buildPreview()"&gt;Ver vista previa </span><span class="s4">→</span><span class="s1">&lt;/button&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;!-- P7 VISTA PREVIA --&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="panel" id="panel-7"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="section-title"&gt;Vista previa&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="section-desc"&gt;Revisa el resumen antes de generar el prompt para Gemini&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="preview-doc" id="preview-container"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="nav-row"&gt;&lt;button class="btn-secondary" onclick="goStep(6)"&gt;</span><span class="s4">←</span><span class="s1"> Editar&lt;/button&gt;&lt;button class="btn-primary" onclick="buildPrompt()"&gt;Generar prompt </span><span class="s4">→</span><span class="s1">&lt;/button&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;!-- P8 GENERAR --&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="panel" id="panel-8"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="section-title"&gt;Generar propuesta&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p class="section-desc"&gt;Gemini redacta la propuesta completa automáticamente — solo haz clic en el botón&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div id="gen-inicial"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="info-box"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="info-box-title"&gt;¿Cómo funciona?&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="info-box-steps"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">1. Ingresa la clave de acceso de Computec&lt;br&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">2. Haz clic en &lt;strong&gt;Generar propuesta&lt;/strong&gt;&lt;br&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">3. Gemini redacta la propuesta completa en segundos&lt;br&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">4. Haz clic en &lt;strong&gt;Abrir en Google Docs&lt;/strong&gt; y listo</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="subsection" style="margin-bottom:1.5rem;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="subsection-title"&gt;Clave de acceso Computec&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="field"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;label&gt;Ingresa la clave proporcionada por tu líder comercial&lt;/label&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;input type="password" id="api-key-input" placeholder="Pega aquí la clave de acceso" style="font-size:13px;letter-spacing:2px;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p style="font-size:11px;color:#5a7a6a;margin-top:6px;"&gt;La clave no se guarda ni se comparte. Solo se usa en esta sesión para generar la propuesta.&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div style="text-align:center;padding:0.5rem 0 1.5rem;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;button class="btn-primary" style="font-size:15px;padding:14px 36px;" onclick="generarPropuesta()"&gt;Generar propuesta con Gemini&lt;/button&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div id="gen-loading" style="display:none;text-align:center;padding:2rem 0;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div style="width:44px;height:44px;border:3px solid #e0e8e3;border-top-color:#13C37A;border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 1rem;"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p style="font-size:14px;color:#5a7a6a;"&gt;Gemini está redactando la propuesta...&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div id="gen-resultado" style="display:none;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:8px;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p style="font-size:13px;font-weight:700;color:#0a7a4a;"&gt;Propuesta generada&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div style="display:flex;gap:8px;flex-wrap:wrap;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;button class="copy-btn" id="copy-result-btn" onclick="copiarResultado()"&gt;Copiar texto completo&lt;/button&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;button class="btn-primary" onclick="abrirGoogleDocs()"&gt;Abrir en Google Docs&lt;/button&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;button class="btn-secondary" onclick="goStep(7)"&gt;</span><span class="s4">←</span><span class="s1"> Editar datos&lt;/button&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div id="resultado-propuesta" style="background:#fff;border:1px solid #e0e8e3;border-radius:10px;padding:2rem;font-size:13px;line-height:1.8;color:#001D21;max-height:600px;overflow-y:auto;white-space:pre-wrap;font-family:'DM Sans',Arial,sans-serif;"&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div style="margin-top:1rem;padding:0.75rem 1rem;background:#f9fdf9;border-radius:8px;border:1px solid #e0e8e3;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p style="font-size:12px;color:#5a7a6a;"&gt;Revisa los datos antes de enviar al cliente. Los valores de inversión son los que ingresaste — Gemini no los modifica.&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div id="gen-error" style="display:none;padding:1rem 1.25rem;background:#fff0f0;border:1px solid #f0c0c0;border-radius:10px;color:#d04040;font-size:13px;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;strong&gt;Error al conectar con Gemini.&lt;/strong&gt; Verifica que la API Key esté correctamente configurada en el archivo y vuelve a intentarlo.</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div style="margin-top:10px;"&gt;&lt;button class="btn-secondary" onclick="reintentar()"&gt;Reintentar&lt;/button&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/div&gt;&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;script&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">let lineaSelected='';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">let subSelected='';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">let fases=[];</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">let itemsU=[];</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const lNombre={conv:'Crecimiento Conversacional',com:'Comunicaciones Conectadas',doc:'Documentos Inteligentes'};</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const fasesD={</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">conv:[</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">{n:'Kick-off y alineación estratégica',d:'1 semana'},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">{n:'Configuración y parametrización del agente',d:'1 semana'},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">{n:'Pruebas de calidad y validación (UAT)',d:'3–5 días'},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">{n:'Puesta en producción y estabilización',d:'3–5 días'},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">{n:'Operación continua y mejora permanente',d:'Mensual recurrente'}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">],</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">com:[</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">{n:'Diagnóstico y planificación',d:'1 semana'},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">{n:'Implementación y configuración de plataformas',d:'1–2 semanas'},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">{n:'Personalización de plantillas y flujos',d:'1 semana'},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">{n:'Pruebas, ajustes y validación con el cliente',d:'3–5 días'},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">{n:'Capacitación y lanzamiento',d:'3–5 días'},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">{n:'Operación y mejora continua',d:'Permanente'}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">],</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">doc:[</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">{n:'Levantamiento de requerimientos técnicos y funcionales',d:'1 semana'},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">{n:'Diseño y configuración de la solución / mapper',d:'1–2 semanas'},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">{n:'Pruebas funcionales y de estructura',d:'3–5 días'},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">{n:'Validación ante ente regulador (si aplica)',d:'3–5 días'},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">{n:'Puesta en producción',d:'2–3 días'},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">{n:'Operación y soporte continuo',d:'Permanente'}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">]</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">};</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function goStep(n){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.querySelectorAll('.panel').forEach(p=&gt;p.classList.remove('active'));</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.querySelectorAll('.step-pill').forEach(p=&gt;{p.classList.remove('active','done');});</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('panel-'+n).classList.add('active');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('pill-'+n).classList.add('active');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">for(let i=1;i&lt;n;i++) document.getElementById('pill-'+i).classList.add('done');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('progress').style.width=(n/8*100)+'%';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">window.scrollTo({top:0,behavior:'smooth'});</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function selLinea(el,l){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.querySelectorAll('.linea-card').forEach(c=&gt;c.classList.remove('selected'));</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">el.classList.add('selected');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">lineaSelected=l;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">subSelected='';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">['conv','com','doc'].forEach(x=&gt;{</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const d=document.getElementById('sub-'+x);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(d) d.style.display='none';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">});</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const target=document.getElementById('sub-'+l);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(target) target.style.display='block';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('alcance-extra').style.display='block';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(fasesD[l]){fases=fasesD[l].map(f=&gt;({n:f.n,d:f.d}));renderFases();}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function selSub(el,nombre){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.querySelectorAll('.sub-card').forEach(c=&gt;c.classList.remove('selected'));</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">el.classList.add('selected');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">subSelected=nombre;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function togInv(){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">['onetime','horas','recurrente','unitario','campana'].forEach(t=&gt;{</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const cb=document.getElementById('tipo-'+t);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const dv=document.getElementById('inv-'+t);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(cb&amp;&amp;dv) dv.style.display=cb.checked?'block':'none';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">});</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function addItem(){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const idx=itemsU.length;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">itemsU.push({c:'',r:'',v:''});</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const cont=document.getElementById('items-unitarios');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const d=document.createElement('div');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">d.style.cssText='display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:8px;margin-bottom:8px;';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">d.innerHTML=`&lt;input type="text" placeholder="Concepto (Ej. Email / SMS básico / Procesamiento)" oninput="itemsU[${idx}].c=this.value" style="font-size:12px;padding:7px 10px;border-radius:8px;border:1.5px solid #d0ddd5;color:#001D21;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;input type="text" placeholder="Rango" oninput="itemsU[${idx}].r=this.value" style="font-size:12px;padding:7px 10px;border-radius:8px;border:1.5px solid #d0ddd5;color:#001D21;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;input type="text" placeholder="Valor" oninput="itemsU[${idx}].v=this.value" style="font-size:12px;padding:7px 10px;border-radius:8px;border:1.5px solid #d0ddd5;color:#001D21;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;button onclick="this.parentElement.remove();" style="padding:7px 10px;border-radius:8px;border:1.5px solid #d0ddd5;background:#f5f7f5;color:#5a7a6a;cursor:pointer;font-size:12px;"&gt;</span><span class="s5">✕</span><span class="s1">&lt;/button&gt;`;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">cont.appendChild(d);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function renderFases(){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const c=document.getElementById('fases-container');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">c.innerHTML='';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">fases.forEach((f,i)=&gt;{</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const d=document.createElement('div');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">d.className='fase-item';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">d.innerHTML=`&lt;input type="text" placeholder="Nombre de la fase" value="${f.n}" oninput="fases[${i}].n=this.value" style="font-size:13px;padding:8px 11px;border-radius:8px;border:1.5px solid #d0ddd5;color:#001D21;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;input type="text" placeholder="Duración" value="${f.d}" oninput="fases[${i}].d=this.value" style="font-size:13px;padding:8px 11px;border-radius:8px;border:1.5px solid #d0ddd5;color:#001D21;"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;button class="fase-del" onclick="rmFase(${i})"&gt;</span><span class="s5">✕</span><span class="s1">&lt;/button&gt;`;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">c.appendChild(d);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">});</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function addFase(){fases.push({n:'',d:''});renderFases();}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function rmFase(i){fases.splice(i,1);renderFases();}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function v(id){return(document.getElementById(id)||{}).value||'';}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function ch(id){const el=document.getElementById(id);return el?el.checked:false;}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function getCanales(){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const r=[];</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const l=lineaSelected;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(l==='conv'){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('c-conv-wa'))r.push('WhatsApp Business');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('c-conv-voz'))r.push('Voz (escalamiento humano)');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('c-conv-sms'))r.push('SMS (notificaciones)');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">} else if(l==='com'){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('c-com-wa'))r.push('WhatsApp Business');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('c-com-voz'))r.push('Voz / llamadas');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('c-com-video'))r.push('Videollamadas');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('c-com-sms'))r.push('SMS');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('c-com-email'))r.push('Email / correo');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">} else if(l==='doc'){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('c-doc-email'))r.push('Email / correo');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('c-doc-sms'))r.push('SMS');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('c-doc-fisico'))r.push('Físico (impresión)');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('c-doc-portal'))r.push('Portal web / consulta online');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">return r;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function getInv(){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const r=[];</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('tipo-onetime')&amp;&amp;v('val-onetime')) r.push({l:'One Time — Implementación'+(v('desc-onetime')?' ('+v('desc-onetime')+')':''),val:v('val-onetime')});</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('tipo-horas')&amp;&amp;v('horas-proy')) r.push({l:'Horas de ingeniero: '+v('horas-proy')+' h × '+v('valor-hora-proy')+(v('desc-horas')?' — '+v('desc-horas'):''),val:v('val-total-horas')||'Ver detalle'});</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('tipo-recurrente')&amp;&amp;v('val-mensual')) r.push({l:'Recurrencia mensual'+(v('nombre-plan')?' — '+v('nombre-plan'):'')+(v('desc-plan')?' ('+v('desc-plan')+')':''),val:v('val-mensual')+'/mes'});</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('tipo-campana')&amp;&amp;v('val-campana')) r.push({l:'Proyecto / campaña'+(v('desc-campana')?' — '+v('desc-campana'):''),val:v('val-campana')});</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('tipo-unitario')) itemsU.filter(i=&gt;i.c).forEach(i=&gt;r.push({l:i.c+(i.r?' ('+i.r+')':''),val:i.v}));</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">return r;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function buildPreview(){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">goStep(7);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const emp=v('empresa')||'[Empresa]';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const con=v('contacto')||'[Contacto]';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const car=v('cargo');const com=v('comercial');const sec=v('sector');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const inv=getInv();const canales=getCanales();</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const sops=[];</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('sop-tecnico'))sops.push('Soporte técnico L-V 8am–5pm');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('sop-ejecutivo'))sops.push('Ejecutivo de cuenta dedicado');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('sop-capacitacion'))sops.push('Capacitación continua');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('sop-dashboard'))sops.push('Dashboard de reportería');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('sop-monitoreo'))sops.push('Monitoreo activo');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('sop-24h'))sops.push('Hasta 24h mensuales de optimización');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const fH=fases.filter(f=&gt;f.n).map((f,i)=&gt;`&lt;li&gt;&lt;strong&gt;Fase ${i+1}:&lt;/strong&gt; ${f.n} &lt;span style="color:#5a7a6a;"&gt;(${f.d})&lt;/span&gt;&lt;/li&gt;`).join('');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const iH=inv.length?inv.map(i=&gt;`&lt;tr&gt;&lt;td&gt;${i.l}&lt;/td&gt;&lt;td&gt;&lt;strong&gt;${i.val}&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;`).join(''):'&lt;tr&gt;&lt;td colspan="2" style="color:#5a7a6a;"&gt;Sin valores ingresados&lt;/td&gt;&lt;/tr&gt;';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('preview-container').innerHTML=`</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;div class="preview-tag"&gt;Propuesta Computec · ${new Date().toLocaleDateString('es-CO',{year:'numeric',month:'long',day:'numeric'})}&lt;/div&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;h1&gt;${subSelected||lNombre[lineaSelected]||'[Solución]'}&lt;/h1&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p style="color:#5a7a6a;font-size:12px;margin-bottom:1rem;"&gt;Línea: ${lNombre[lineaSelected]||'—'} · Para: ${emp}${sec?' · '+sec:''}&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;table class="mt"&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;tr&gt;&lt;td&gt;Cliente&lt;/td&gt;&lt;td&gt;${emp}&lt;/td&gt;&lt;/tr&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;tr&gt;&lt;td&gt;Contacto&lt;/td&gt;&lt;td&gt;${con}${car?' — '+car:''}&lt;/td&gt;&lt;/tr&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;tr&gt;&lt;td&gt;Comercial Computec&lt;/td&gt;&lt;td&gt;${com}&lt;/td&gt;&lt;/tr&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;tr&gt;&lt;td&gt;Línea de solución&lt;/td&gt;&lt;td&gt;${lNombre[lineaSelected]||'—'}&lt;/td&gt;&lt;/tr&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;tr&gt;&lt;td&gt;Solución específica&lt;/td&gt;&lt;td&gt;${subSelected||'—'}&lt;/td&gt;&lt;/tr&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${canales.length?`&lt;tr&gt;&lt;td&gt;Canales&lt;/td&gt;&lt;td&gt;${canales.join(' · ')}&lt;/td&gt;&lt;/tr&gt;`:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;tr&gt;&lt;td&gt;Vigencia oferta&lt;/td&gt;&lt;td&gt;${v('vig-oferta')}&lt;/td&gt;&lt;/tr&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/table&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;h2&gt;Necesidad del cliente&lt;/h2&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p&gt;${v('contexto')||'(sin descripción)'}&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${v('piloto')?`&lt;p&gt;&lt;strong&gt;Antecedente:&lt;/strong&gt; ${v('piloto')}&lt;/p&gt;`:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;h2&gt;Inversión&lt;/h2&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;table class="it"&gt;&lt;tr&gt;&lt;th&gt;Concepto&lt;/th&gt;&lt;th&gt;Valor&lt;/th&gt;&lt;/tr&gt;${iH}&lt;/table&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;p style="font-size:11px;color:#5a7a6a;"&gt;Valores sin IVA · Pago: ${v('pago')||'30 días'} · Facturación: ${v('facturacion')}${v('vigencia')?' · Vigencia: '+v('vigencia'):''}&lt;/p&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${v('beneficios-com')?`&lt;h2&gt;Beneficios comerciales&lt;/h2&gt;&lt;p&gt;${v('beneficios-com')}&lt;/p&gt;`:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;h2&gt;Cronograma&lt;/h2&gt;&lt;ul&gt;${fH||'&lt;li&gt;Sin fases definidas&lt;/li&gt;'}&lt;/ul&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${v('fecha-inicio')?`&lt;p&gt;Inicio: &lt;strong&gt;${v('fecha-inicio')}&lt;/strong&gt;${v('tiempo-total')?' · Duración: '+v('tiempo-total'):''}&lt;/p&gt;`:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;h2&gt;Soporte incluido&lt;/h2&gt;&lt;ul&gt;${sops.map(s=&gt;`&lt;li&gt;${s}&lt;/li&gt;`).join('')||'&lt;li&gt;Ver términos del contrato&lt;/li&gt;'}&lt;/ul&gt;`;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const GEMINI_API_KEY = 'TU_API_KEY_AQUI';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">let propuestaGenerada = '';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function buildPromptText(){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const emp=v('empresa')||'[Empresa cliente]';const sec=v('sector');const con=v('contacto');const car=v('cargo');const com=v('comercial');const ema=v('emailcomercial');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const ctx=v('contexto');const pil=v('piloto');const alc=v('alcance');const ben=v('beneficios');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const pag=v('pago');const fac=v('facturacion');const vig=v('vigencia');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const vigO=v('vig-oferta');const iniS=v('inicio-servicio');const mor=v('mora');const inc=v('incremento');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const obs=v('obs-adicionales');const fIni=v('fecha-inicio');const tTot=v('tiempo-total');const prox=v('proximos-pasos');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const benC=v('beneficios-com');const notI=v('notas-inv');const otS=v('otros-servicios');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const canales=getCanales();</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const va=[];</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('va-plantillas'))va.push('Diseño de plantillas de email personalizadas');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('va-limpieza'))va.push('Diagnóstico y limpieza de reputación de sender');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('va-migracion'))va.push('Migración de datos y plantillas existentes');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('va-guias'))va.push('Guías digitales certificadas con validez legal');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('va-almacenamiento'))va.push('Almacenamiento online con acceso 24/7');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('va-qr'))va.push('Botones de pago y códigos QR en plantillas');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('va-pruebas'))va.push('Pruebas ante ente regulador (DIAN)');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('va-produccion'))va.push('Puesta en producción incluida en el alcance');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(otS)va.push(otS);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const sops=[];</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('sop-tecnico'))sops.push('Soporte técnico L-V 8am–5pm');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('sop-ejecutivo'))sops.push('Ejecutivo de cuenta dedicado');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('sop-capacitacion'))sops.push('Capacitación continua');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('sop-dashboard'))sops.push('Dashboard de reportería y métricas');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('sop-monitoreo'))sops.push('Monitoreo activo del servicio');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('sop-24h'))sops.push('Hasta 24h mensuales de optimización');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const terms=[];</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('t-iva'))terms.push('Los valores presentados no incluyen IVA');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('t-propiedad'))terms.push('La propiedad intelectual de la configuración y arquitectura tecnológica es exclusiva de Computec');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('t-datos'))terms.push('El cliente mantiene la titularidad total de sus datos');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('t-renovacion')&amp;&amp;vig)terms.push('Vigencia: '+vig+', con renovación automática si ninguna de las partes manifiesta lo contrario con mínimo 30 días de anticipación');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('t-terminacion'))terms.push('En caso de terminación anticipada, el cliente deberá cumplir con el período mínimo contratado');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('t-ajustes'))terms.push('Cambios de alcance o reglas adicionales se cotizan adicionalmente con el formato de requerimientos establecido');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('t-fuerza'))terms.push('Computec no será responsable por fallas de fuerza mayor ajenas a su control');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('t-ley'))terms.push('Ley aplicable: República de Colombia. Jurisdicción: Bogotá D.C.');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('t-1581'))terms.push('El servicio se prestará en cumplimiento de la Ley 1581 de Protección de Datos Personales');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('t-escala'))terms.push('Si se supera el rango del plan contratado, se aplicará automáticamente el rango siguiente');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(ch('t-pruebas'))terms.push('El inicio en producción requiere la aprobación formal de la etapa de pruebas por parte del cliente');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(mor)terms.push('Suspensión por mora: '+mor);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(inc)terms.push('Incremento tarifario anual: '+inc);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const inv=getInv();</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const invT=inv.length?inv.map(i=&gt;` - ${i.l}: ${i.val}`).join('\n'):' A definir con el cliente';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const fasT=fases.filter(f=&gt;f.n).map((f,i)=&gt;` Fase ${i+1}: ${f.n} — ${f.d}`).join('\n');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">return `Eres el asistente comercial experto de Computec Outsourcing S.A.S. Genera una propuesta comercial completa, profesional y persuasiva en español. Usa formato de texto plano con separadores claros — NO uses Markdown con asteriscos, no uses #. Usa MAYÚSCULAS para títulos de sección y guiones para listas. No inventes datos ni precios no proporcionados.</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">DATOS DEL CLIENTE:</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">Empresa: ${emp}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${sec?'Sector: '+sec:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">Contacto: ${con}${car?' — '+car:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">Comercial Computec: ${com}${ema?' — '+ema:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">Fecha: ${new Date().toLocaleDateString('es-CO',{year:'numeric',month:'long',day:'numeric'})}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">CONTEXTO Y NECESIDAD:</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${ctx||'[Describir necesidad del cliente]'}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${pil?'\nANTECEDENTE / PROYECTO PREVIO:\n'+pil:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">SOLUCIÓN PROPUESTA:</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">Línea Computec: ${lNombre[lineaSelected]||'[Línea]'}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">Solución: ${subSelected||'[Solución específica]'}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${canales.length?'Canales incluidos: '+canales.join(', '):''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${alc?'Alcance específico:\n'+alc:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${ben?'Diferenciadores clave:\n'+ben:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">INVERSIÓN:</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${invT}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">Forma de pago: ${pag||'30 días'}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">Facturación: ${fac}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${benC?'Beneficios comerciales: '+benC:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${notI?'Notas: '+notI:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">SOPORTE INCLUIDO:</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${sops.map(s=&gt;'- '+s).join('\n')||'Ver términos del contrato'}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${va.length?'\nSERVICIOS Y VALOR AGREGADO:\n'+va.map(s=&gt;'- '+s).join('\n'):''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">CRONOGRAMA:</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${fIni?'Fecha de inicio: '+fIni:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${tTot?'Tiempo total: '+tTot:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${fasT?'FASES:\n'+fasT:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${prox?'\nPRÓXIMOS PASOS:\n'+prox:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">TÉRMINOS:</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">Vigencia de la oferta: ${vigO||'15 días hábiles'}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${iniS?'Inicio del servicio: '+iniS:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${terms.map(t=&gt;'- '+t).join('\n')}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">${obs?'\nCONDICIONES ESPECIALES:\n'+obs:''}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">INSTRUCCIONES DE ESTRUCTURA:</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">Genera la propuesta completa con este orden exacto. Usa texto plano, sin Markdown, sin asteriscos. Separa secciones con una línea en blanco y el título en MAYÚSCULAS.</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">1. ENCABEZADO con tabla de datos: Fecha, Versión (1.0), Vigencia de oferta, Código propuesta (formato COT-[iniciales empresa]-[mes][año]), Preparado para, Preparado por, Contacto, Descripción del servicio.</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">2. Título grande: "Vamos a hacerlo más simple, más eficiente" y subtítulo "Soluciones inteligentes para optimizar comunicaciones y documentos"</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">3. CONTEXTO Y DIAGNÓSTICO: 2-3 párrafos conectando con la necesidad real del cliente.</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">4. SOLUCIÓN PROPUESTA: Descripción completa de la solución, canales y qué resuelve.</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">5. PARA QUÉ LO HACEMOS: 5-6 beneficios con título en mayúsculas y descripción de 1-2 líneas.</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">6. CÓMO LO VAMOS A HACER - METODOLOGÍA: Fases con nombre, duración y actividades clave.</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">7. DETALLES TÉCNICOS: Lista de especificaciones técnicas, integraciones y seguridad con marca de aplica/no aplica.</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">8. SOPORTE Y ACOMPAÑAMIENTO: Lista con los elementos incluidos.</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">9. INVERSIÓN: Tabla con todos los conceptos y valores. Nota al pie: valores sin IVA.</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">10. TÉRMINOS DE LA OFERTA: Lista con todos los términos.</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">11. PRÓXIMOS PASOS: Lista numerada de 4 pasos.</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">12. POR QUÉ COMPUTEC: +56 años de experiencia, grupo TLP, sectores atendidos.</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">13. AGRADECIMIENTO: Párrafo final con nombre y datos del comercial.</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">14. SECCIÓN DE APROBACIÓN: Tabla con campos de firma.</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">TONO: Profesional, consultivo y cercano. Español colombiano. Frases clave: "Vamos a hacerlo más simple, más eficiente", "Nuestro compromiso no termina con la implementación".`;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">async function generarPropuesta(){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const apiKey = document.getElementById('api-key-input').value.trim();</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(!apiKey){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">alert('Por favor ingresa la clave de acceso Computec para continuar.');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">return;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('gen-inicial').style.display='none';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('gen-loading').style.display='block';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('gen-resultado').style.display='none';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('gen-error').style.display='none';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">try{</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const prompt=buildPromptText();</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const response=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,{</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">method:'POST',</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">headers:{'Content-Type':'application/json'},</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">body:JSON.stringify({</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">contents:[{parts:[{text:prompt}]}],</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">generationConfig:{temperature:0.7,maxOutputTokens:8192}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">})</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">});</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(!response.ok) throw new Error('Error API: '+response.status);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const data=await response.json();</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const texto=data.candidates?.[0]?.content?.parts?.[0]?.text||'';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">if(!texto) throw new Error('Sin respuesta');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">propuestaGenerada=texto;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('resultado-propuesta').textContent=texto;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('gen-loading').style.display='none';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('gen-resultado').style.display='block';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">} catch(e){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('gen-loading').style.display='none';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('gen-error').style.display='block';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">console.error(e);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function reintentar(){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('gen-error').style.display='none';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('gen-inicial').style.display='block';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function copiarResultado(){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">navigator.clipboard.writeText(propuestaGenerada).then(()=&gt;{</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const btn=document.getElementById('copy-result-btn');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">btn.textContent='¡Copiado!';btn.classList.add('copied');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">setTimeout(()=&gt;{btn.textContent='Copiar texto completo';btn.classList.remove('copied');},2500);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}).catch(()=&gt;{</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const el=document.getElementById('resultado-propuesta');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const range=document.createRange();range.selectNode(el);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">window.getSelection().removeAllRanges();window.getSelection().addRange(range);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.execCommand('copy');window.getSelection().removeAllRanges();</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const btn=document.getElementById('copy-result-btn');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">btn.textContent='¡Copiado!';btn.classList.add('copied');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">setTimeout(()=&gt;{btn.textContent='Copiar texto completo';btn.classList.remove('copied');},2500);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">});</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function abrirGoogleDocs(){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">copiarResultado();</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">setTimeout(()=&gt;{</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">window.open('https://docs.new','_blank');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">setTimeout(()=&gt;{</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">alert('Google Docs ya está abierto. Pega el texto con Ctrl+V (Windows) o Cmd+V (Mac).');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">},1500);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">},300);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function buildPrompt(){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">goStep(8);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('gen-inicial').style.display='block';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('gen-loading').style.display='none';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('gen-resultado').style.display='none';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">document.getElementById('gen-error').style.display='none';</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">function copyText(sourceId,btnId,originalText){</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const text=document.getElementById(sourceId).textContent;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">navigator.clipboard.writeText(text).then(()=&gt;{</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const btn=document.getElementById(btnId);btn.textContent='¡Copiado!';btn.classList.add('copied');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">setTimeout(()=&gt;{btn.textContent=originalText;btn.classList.remove('copied');},2500);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}).catch(()=&gt;{</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const el=document.getElementById(sourceId);const range=document.createRange();range.selectNode(el);window.getSelection().removeAllRanges();window.getSelection().addRange(range);document.execCommand('copy');window.getSelection().removeAllRanges();</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">const btn=document.getElementById(btnId);btn.textContent='¡Copiado!';btn.classList.add('copied');</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">setTimeout(()=&gt;{btn.textContent=originalText;btn.classList.remove('copied');},2500);</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">});</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">}</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">renderFases();</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/script&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p3"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
