@@ -1,0 +1,827 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="es"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;Generador de Propuestas Computec&lt;/title&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">*{box-sizing:border-box;margin:0;padding:0;}</p>
+<p class="p1">body{font-family:'DM Sans',Arial,sans-serif;background:#f5f7f5;color:#001D21;min-height:100vh;}</p>
+<p class="p1">.topbar{background:#001D21;padding:14px 32px;display:flex;align-items:center;gap:12px;}</p>
+<p class="p1">.topbar-logo{color:#13C37A;font-size:18px;font-weight:700;}</p>
+<p class="p1">.topbar-sub{color:#ffffff88;font-size:13px;}</p>
+<p class="p1">.container{max-width:860px;margin:0 auto;padding:2rem 1.5rem;}</p>
+<p class="p1">.card{background:#fff;border-radius:12px;border:0.5px solid #e0e8e3;padding:2rem;margin-bottom:1.5rem;}</p>
+<p class="p1">.steps{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2rem;}</p>
+<p class="p1">.step-pill{padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;border:1.5px solid #d0ddd5;color:#5a7a6a;background:#fff;transition:all 0.15s;white-space:nowrap;}</p>
+<p class="p1">.step-pill.active{background:#13C37A;color:#001D21;border-color:#13C37A;}</p>
+<p class="p1">.step-pill.done{background:#e8f7ef;color:#0a7a4a;border-color:#13C37A99;}</p>
+<p class="p1">.panel{display:none;}.panel.active{display:block;}</p>
+<p class="p1">.section-title{font-size:17px;font-weight:700;color:#001D21;margin-bottom:4px;}</p>
+<p class="p1">.section-desc{font-size:13px;color:#5a7a6a;margin-bottom:1.5rem;}</p>
+<p class="p1">.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:1.25rem;}</p>
+<p class="p1">.form-grid.single{grid-template-columns:1fr;}</p>
+<p class="p1">.field{display:flex;flex-direction:column;gap:5px;}</p>
+<p class="p1">.field label{font-size:12px;font-weight:600;color:#3a5a4a;}</p>
+<p class="p1">.field input,.field select,.field textarea{font-size:13px;padding:9px 12px;border-radius:8px;border:1.5px solid #d0ddd5;background:#fff;color:#001D21;width:100%;transition:border 0.15s;}</p>
+<p class="p1">.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:#13C37A;}</p>
+<p class="p1">.field textarea{min-height:80px;resize:vertical;}</p>
+<p class="p1">.linea-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:1.5rem;}</p>
+<p class="p1">.linea-card{padding:16px;border-radius:10px;border:1.5px solid #d0ddd5;cursor:pointer;transition:all 0.15s;background:#fff;}</p>
+<p class="p1">.linea-card:hover{border-color:#13C37A;background:#f0fdf5;}</p>
+<p class="p1">.linea-card.selected{border-color:#13C37A;background:#e8f7ef;}</p>
+<p class="p1">.linea-badge{display:inline-block;padding:3px 10px;border-radius:10px;font-size:10px;font-weight:700;margin-bottom:8px;}</p>
+<p class="p1">.b1{background:#001D2118;color:#001D21;}.b2{background:#13C37A22;color:#0a7a4a;}.b3{background:#378ADD22;color:#185FA5;}</p>
+<p class="p1">.linea-name{font-size:14px;font-weight:700;color:#001D21;margin-bottom:4px;}</p>
+<p class="p1">.linea-desc{font-size:11px;color:#5a7a6a;line-height:1.5;}</p>
+<p class="p1">.sub-sol{display:none;margin-bottom:1.25rem;}.sub-sol.visible{display:block;}</p>
+<p class="p1">.sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;}</p>
+<p class="p1">.sub-card{padding:10px 12px;border-radius:8px;border:1.5px solid #d0ddd5;cursor:pointer;font-size:12px;font-weight:600;color:#001D21;background:#fff;transition:all 0.15s;text-align:left;}</p>
+<p class="p1">.sub-card:hover{border-color:#13C37A;}.sub-card.selected{border-color:#13C37A;background:#e8f7ef;color:#0a7a4a;}</p>
+<p class="p1">.canales-box{background:#f9fdf9;border:1px solid #e0e8e3;border-radius:8px;padding:10px 14px;margin-bottom:1rem;}</p>
+<p class="p1">.canales-title{font-size:12px;font-weight:700;color:#3a5a4a;margin-bottom:8px;}</p>
+<p class="p1">.canal-check{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#001D21;cursor:pointer;margin:3px 8px 3px 0;}</p>
+<p class="p1">.canal-check input{accent-color:#13C37A;}</p>
+<p class="p1">.fase-item{display:grid;grid-template-columns:2fr 1fr auto;gap:8px;align-items:center;margin-bottom:8px;}</p>
+<p class="p1">.fase-del{padding:7px 11px;border-radius:8px;border:1.5px solid #d0ddd5;background:#f5f7f5;color:#5a7a6a;cursor:pointer;font-size:12px;}</p>
+<p class="p1">.add-btn{font-size:12px;color:#0a7a4a;cursor:pointer;border:none;background:none;padding:4px 0;font-weight:700;}</p>
+<p class="p1">.btn-primary{padding:10px 26px;border-radius:8px;background:#13C37A;color:#001D21;font-size:13px;font-weight:700;border:none;cursor:pointer;}</p>
+<p class="p1">.btn-primary:hover{background:#0fa86a;}</p>
+<p class="p1">.btn-secondary{padding:10px 22px;border-radius:8px;background:#f5f7f5;color:#001D21;font-size:13px;font-weight:600;border:1.5px solid #d0ddd5;cursor:pointer;}</p>
+<p class="p1">.nav-row{display:flex;justify-content:space-between;align-items:center;margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid #e8f0ec;}</p>
+<p class="p1">.subsection{margin-bottom:1.25rem;padding:1rem 1.25rem;border-radius:10px;border:1px solid #e0e8e3;background:#f9fdf9;}</p>
+<p class="p1">.subsection-title{font-size:13px;font-weight:700;color:#001D21;margin-bottom:10px;}</p>
+<p class="p1">.checkbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px;}</p>
+<p class="p1">.check-item{display:flex;align-items:center;gap:8px;font-size:12px;color:#001D21;cursor:pointer;}</p>
+<p class="p1">.check-item input[type=checkbox]{width:15px;height:15px;cursor:pointer;accent-color:#13C37A;}</p>
+<p class="p1">.tag-req{display:inline-block;padding:1px 7px;border-radius:8px;font-size:10px;font-weight:700;background:#fff0f0;color:#d04040;margin-left:5px;}</p>
+<p class="p1">.tag-opt{display:inline-block;padding:1px 7px;border-radius:8px;font-size:10px;font-weight:600;background:#f0f0f0;color:#5a7a6a;margin-left:5px;}</p>
+<p class="p1">.terminos-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}</p>
+<p class="p1">.preview-doc{background:#fff;border:1px solid #e0e8e3;border-radius:10px;padding:2rem;font-size:13px;line-height:1.8;color:#001D21;max-height:540px;overflow-y:auto;}</p>
+<p class="p1">.preview-doc h1{font-size:20px;font-weight:700;margin-bottom:8px;}</p>
+<p class="p1">.preview-doc h2{font-size:14px;font-weight:700;margin:1.25rem 0 6px;color:#0a7a4a;border-bottom:1.5px solid #13C37A44;padding-bottom:4px;}</p>
+<p class="p1">.preview-doc p{margin-bottom:8px;}.preview-doc ul{margin:6px 0 10px 18px;}.preview-doc li{margin-bottom:4px;}</p>
+<p class="p1">.preview-doc .mt{width:100%;border-collapse:collapse;margin-bottom:1rem;font-size:12px;}</p>
+<p class="p1">.preview-doc .mt td{padding:6px 10px;border:1px solid #e0e8e3;}</p>
+<p class="p1">.preview-doc .mt td:first-child{font-weight:700;background:#f5f7f5;width:35%;}</p>
+<p class="p1">.preview-doc .it{width:100%;border-collapse:collapse;margin:8px 0;font-size:12px;}</p>
+<p class="p1">.preview-doc .it th{background:#13C37A;color:#001D21;padding:7px 10px;text-align:left;font-weight:700;}</p>
+<p class="p1">.preview-doc .it td{padding:6px 10px;border-bottom:1px solid #e8f0ec;}</p>
+<p class="p1">.preview-tag{display:inline-block;padding:4px 12px;border-radius:12px;font-size:11px;font-weight:700;background:#13C37A;color:#001D21;margin-bottom:14px;}</p>
+<p class="p1">.prompt-area{background:#f5f7f5;border:1.5px solid #d0ddd5;border-radius:10px;padding:1.25rem;margin-bottom:1rem;}</p>
+<p class="p1">.prompt-text{font-size:11px;color:#001D21;line-height:1.7;background:#fff;padding:12px;border-radius:8px;border:1px solid #e0e8e3;white-space:pre-wrap;max-height:340px;overflow-y:auto;font-family:monospace;}</p>
+<p class="p1">.info-box{background:#e8f7ef;border:1px solid #13C37A66;border-radius:10px;padding:1rem 1.25rem;margin-bottom:1rem;}</p>
+<p class="p1">.info-box-title{font-size:13px;font-weight:700;color:#0a7a4a;margin-bottom:5px;}</p>
+<p class="p1">.info-box-steps{font-size:12px;color:#1a5a3a;line-height:1.9;}</p>
+<p class="p1">.copy-btn{padding:10px 20px;border-radius:8px;background:#13C37A;color:#001D21;font-size:12px;font-weight:700;border:none;cursor:pointer;}</p>
+<p class="p1">.copy-btn:hover{background:#0fa86a;}.copy-btn.copied{background:#e8f7ef;color:#0a7a4a;border:1.5px solid #13C37A;}</p>
+<p class="p1">.copy-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1.5rem;}</p>
+<p class="p1">.progress-bar{height:4px;background:#e0e8e3;border-radius:2px;margin-bottom:1.5rem;overflow:hidden;}</p>
+<p class="p1">.progress-fill{height:100%;background:#13C37A;border-radius:2px;transition:width 0.3s;}</p>
+<p class="p1">.hint{font-size:11px;color:#5a7a6a;font-style:italic;margin-top:4px;}</p>
+<p class="p1">@keyframes spin{to{transform:rotate(360deg);}}</p>
+<p class="p1">@media(max-width:640px){.form-grid{grid-template-columns:1fr;}.linea-grid{grid-template-columns:1fr;}.sub-grid,.checkbox-grid,.terminos-grid{grid-template-columns:1fr 1fr;}.fase-item{grid-template-columns:1fr auto;}}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1">&lt;div class="topbar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="topbar-logo"&gt;&amp;#9643; Computec&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="topbar-sub"&gt;Generador de Propuestas Comerciales&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;div class="container"&gt;&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="steps"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="step-pill active" id="pill-1" onclick="goStep(1)"&gt;1 · Cliente&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="step-pill" id="pill-2" onclick="goStep(2)"&gt;2 · Solución&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="step-pill" id="pill-3" onclick="goStep(3)"&gt;3 · Inversión&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="step-pill" id="pill-4" onclick="goStep(4)"&gt;4 · Extras&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="step-pill" id="pill-5" onclick="goStep(5)"&gt;5 · Fases&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="step-pill" id="pill-6" onclick="goStep(6)"&gt;6 · Términos&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="step-pill" id="pill-7" onclick="goStep(7)"&gt;7 · Vista previa&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="step-pill" id="pill-8" onclick="goStep(8)"&gt;8 · Prompt&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="progress-bar"&gt;&lt;div class="progress-fill" id="progress" style="width:12.5%;"&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- P1 CLIENTE --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="panel active" id="panel-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-title"&gt;Datos del cliente&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-desc"&gt;Información básica de la empresa y el contacto decisor&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Empresa cliente &lt;span class="tag-req"&gt;requerido&lt;/span&gt;&lt;/label&gt;&lt;input type="text" id="empresa" placeholder="Ej. Recuperacall Solutions"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Sector / industria &lt;span class="tag-req"&gt;requerido&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;select id="sector"&gt;&lt;option value=""&gt;Seleccionar...&lt;/option&gt;&lt;option&gt;Educación&lt;/option&gt;&lt;option&gt;Banca y finanzas&lt;/option&gt;&lt;option&gt;Pensiones y cesantías&lt;/option&gt;&lt;option&gt;Cobranza y cartera&lt;/option&gt;&lt;option&gt;Salud&lt;/option&gt;&lt;option&gt;Retail y comercio&lt;/option&gt;&lt;option&gt;Telecomunicaciones&lt;/option&gt;&lt;option&gt;Gobierno&lt;/option&gt;&lt;option&gt;Industria y manufactura&lt;/option&gt;&lt;option&gt;Tecnología&lt;/option&gt;&lt;option&gt;Servicios profesionales&lt;/option&gt;&lt;option&gt;Otro&lt;/option&gt;&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Nombre del contacto &lt;span class="tag-req"&gt;requerido&lt;/span&gt;&lt;/label&gt;&lt;input type="text" id="contacto" placeholder="Ej. Edward Pérez"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Cargo del contacto&lt;/label&gt;&lt;input type="text" id="cargo" placeholder="Ej. Gerente de Operaciones"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Comercial Computec &lt;span class="tag-req"&gt;requerido&lt;/span&gt;&lt;/label&gt;&lt;input type="text" id="comercial" placeholder="Tu nombre completo"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Email / teléfono comercial&lt;/label&gt;&lt;input type="text" id="emailcomercial" placeholder="tucorreo@computec.com / +57311..."&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-grid single"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Contexto y necesidad del cliente &lt;span class="tag-req"&gt;requerido&lt;/span&gt;&lt;/label&gt;&lt;textarea id="contexto" placeholder="Describe el problema o necesidad real. Ej: Fragmentación en canales, falta de trazabilidad, proceso manual que no escala, rechazos de la DIAN, correos que no llegan..."&gt;&lt;/textarea&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Antecedente, piloto o proyecto previo &lt;span class="tag-opt"&gt;si aplica&lt;/span&gt;&lt;/label&gt;&lt;textarea id="piloto" placeholder="Ej: Piloto ejecutado entre nov/25 y ene/26. Resultados validados en producción." style="min-height:56px;"&gt;&lt;/textarea&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-row"&gt;&lt;span&gt;&lt;/span&gt;&lt;button class="btn-primary" onclick="goStep(2)"&gt;Siguiente →&lt;/button&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- P2 SOLUCIÓN --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="panel" id="panel-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-title"&gt;Línea de solución&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-desc"&gt;Selecciona la línea principal y luego la solución específica&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="linea-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="linea-card" onclick="selLinea(this,'conv')"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="linea-badge b1"&gt;Crecimiento Conversacional&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="linea-name"&gt;Agentes de IA y Chatbots&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="linea-desc"&gt;Cobranza automatizada, atención al cliente, chatbots, agentes de IA generativa, interacción 24/7&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="linea-card" onclick="selLinea(this,'com')"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="linea-badge b2"&gt;Comunicaciones Conectadas&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="linea-name"&gt;Voz, Mensajería y Omnicanalidad&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="linea-desc"&gt;WhatsApp Business, voz, videollamadas, SMS, email, omnicanalidad, integración con CRM y Odoo&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="linea-card" onclick="selLinea(this,'doc')"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="linea-badge b3"&gt;Documentos Inteligentes&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="linea-name"&gt;Radar 2.0, Extractos y Facturación&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="linea-desc"&gt;Extractos masivos, facturación electrónica, almacenamiento, SMS y email transaccional, generación documental&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Sub-soluciones CONV --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sub-sol" id="sub-conv" style="display:none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p style="font-size:12px;font-weight:700;color:#3a5a4a;margin-bottom:8px;"&gt;¿Qué solución específica vas a proponer?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="sub-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Agente de IA para Cobranza')"&gt;Agente de IA para Cobranza&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Agente de IA para Atención al Cliente')"&gt;Agente de IA Atención al Cliente&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Chatbot Conversacional')"&gt;Chatbot Conversacional&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Agente de IA Generativa')"&gt;Agente de IA Generativa&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Automatización de Campañas Conversacionales')"&gt;Automatización de Campañas&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Otra — especificar abajo')"&gt;Otra — especificar abajo&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="canales-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="canales-title"&gt;Canales incluidos en esta solución&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-conv-wa" checked&gt; WhatsApp Business&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-conv-voz"&gt; Voz (escalamiento humano)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-conv-sms"&gt; SMS (notificaciones)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Sub-soluciones COM --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sub-sol" id="sub-com" style="display:none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p style="font-size:12px;font-weight:700;color:#3a5a4a;margin-bottom:8px;"&gt;¿Qué solución específica vas a proponer?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="sub-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Integración Voz y WhatsApp con Odoo')"&gt;Integración Voz + WhatsApp con Odoo&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Comunicaciones Inteligentes Omnicanal')"&gt;Comunicaciones Inteligentes Omnicanal&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'WhatsApp Business API')"&gt;WhatsApp Business API&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Voz y Videollamadas')"&gt;Voz y Videollamadas&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Integración con CRM')"&gt;Integración con CRM&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Encuestas y Satisfacción al Cliente')"&gt;Encuestas y Satisfacción&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Otra — especificar abajo')"&gt;Otra — especificar abajo&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="canales-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="canales-title"&gt;Canales incluidos en esta solución&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-com-wa"&gt; WhatsApp Business&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-com-voz"&gt; Voz / llamadas&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-com-video"&gt; Videollamadas&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-com-sms"&gt; SMS&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-com-email"&gt; Email / correo&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Sub-soluciones DOC --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sub-sol" id="sub-doc" style="display:none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p style="font-size:12px;font-weight:700;color:#3a5a4a;margin-bottom:8px;"&gt;¿Qué solución específica vas a proponer?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="sub-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Extractos y Comunicaciones Masivas')"&gt;Extractos y Comunicaciones Masivas&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Radar 2.0 — Gestión Documental')"&gt;Radar 2.0 — Gestión Documental&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Facturación Electrónica')"&gt;Facturación Electrónica&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Configuración de Mapper / Reglas de Negocio')"&gt;Configuración de Mapper / Reglas&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Almacenamiento y Custodia Documental')"&gt;Almacenamiento y Custodia&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'SMS Documental e Inteligente')"&gt;SMS Documental e Inteligente&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Email Transaccional Masivo')"&gt;Email Transaccional Masivo&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub-card" onclick="selSub(this,'Otra — especificar abajo')"&gt;Otra — especificar abajo&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="canales-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="canales-title"&gt;Canales de distribución incluidos&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-doc-email"&gt; Email / correo&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-doc-sms"&gt; SMS&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-doc-fisico"&gt; Físico (impresión)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="canal-check"&gt;&lt;input type="checkbox" id="c-doc-portal"&gt; Portal web / consulta online&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="alcance-extra" style="display:none;margin-top:1rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-grid single"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;&lt;label&gt;Descripción específica del alcance &lt;span class="tag-opt"&gt;opcional&lt;/span&gt;&lt;/label&gt;&lt;textarea id="alcance" placeholder="Describe módulos, configuraciones o características específicas que incluye esta propuesta."&gt;&lt;/textarea&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;&lt;label&gt;Diferenciadores y beneficios clave para este cliente&lt;/label&gt;&lt;textarea id="beneficios" placeholder="Ej: Trazabilidad jurídica 360°, disponibilidad 24/7, cumplimiento DIAN, encriptación de datos sensibles..." style="min-height:60px;"&gt;&lt;/textarea&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-row"&gt;&lt;button class="btn-secondary" onclick="goStep(1)"&gt;← Atrás&lt;/button&gt;&lt;button class="btn-primary" onclick="goStep(3)"&gt;Siguiente →&lt;/button&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- P3 INVERSIÓN --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="panel" id="panel-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-title"&gt;Inversión&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-desc"&gt;Selecciona el tipo de cobro e ingresa los valores negociados — cada propuesta es diferente&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="subsection"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="subsection-title"&gt;¿Qué tipo de cobro incluye esta propuesta?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="checkbox-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="tipo-onetime" onchange="togInv()"&gt; One Time — Implementación&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="tipo-horas" onchange="togInv()"&gt; Por horas de ingeniero&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="tipo-recurrente" onchange="togInv()"&gt; Recurrencia mensual&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="tipo-unitario" onchange="togInv()"&gt; Por volumen / unitario&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="tipo-campana" onchange="togInv()"&gt; Por campaña o proyecto puntual&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="inv-onetime" style="display:none;" class="subsection"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="subsection-title"&gt;One Time — Implementación&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;&lt;label&gt;Valor total (COP)&lt;/label&gt;&lt;input type="text" id="val-onetime" placeholder="Ej. $20.000.000"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;&lt;label&gt;Descripción&lt;/label&gt;&lt;input type="text" id="desc-onetime" placeholder="Ej. Integración técnica + configuración inicial"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="inv-horas" style="display:none;" class="subsection"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="subsection-title"&gt;Por horas de ingeniero&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;&lt;label&gt;Cantidad de horas&lt;/label&gt;&lt;input type="number" id="horas-proy" placeholder="Ej. 13" min="0"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;&lt;label&gt;Valor por hora (COP, antes de IVA)&lt;/label&gt;&lt;input type="text" id="valor-hora-proy" placeholder="Ej. $124.136 o $195.000"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;&lt;label&gt;Valor total del proyecto (COP)&lt;/label&gt;&lt;input type="text" id="val-total-horas" placeholder="Se calcula: horas × valor hora"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;&lt;label&gt;Descripción del trabajo&lt;/label&gt;&lt;input type="text" id="desc-horas" placeholder="Ej. Incluye pruebas y puesta en producción"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="hint"&gt;Ej: 13 horas × $124.136 = $1.416.000 antes de IVA&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="inv-recurrente" style="display:none;" class="subsection"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="subsection-title"&gt;Recurrencia mensual&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;&lt;label&gt;Nombre del plan&lt;/label&gt;&lt;input type="text" id="nombre-plan" placeholder="Ej. Scale 8K / Plan 6K / Plan Base"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;&lt;label&gt;Valor mensual (COP)&lt;/label&gt;&lt;input type="text" id="val-mensual" placeholder="Ej. $16.000.000"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;&lt;label&gt;Descripción del plan&lt;/label&gt;&lt;input type="text" id="desc-plan" placeholder="Ej. Hasta 8.000 usuarios / 48.000 mensajes"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;&lt;label&gt;Vigencia del contrato&lt;/label&gt;&lt;select id="vigencia"&gt;&lt;option value="12 meses"&gt;12 meses&lt;/option&gt;&lt;option value="24 meses"&gt;24 meses&lt;/option&gt;&lt;option value="36 meses"&gt;36 meses&lt;/option&gt;&lt;option value="A definir"&gt;A definir&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="inv-unitario" style="display:none;" class="subsection"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="subsection-title"&gt;Por volumen / unitario&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="items-unitarios"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="add-btn" onclick="addItem()"&gt;+ Agregar concepto&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="hint" style="margin-top:6px;"&gt;Ej: Email 1–20.000 = $130.000 · SMS básico 1–50.000 = $340.000 · Procesamiento por documento = $70&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="inv-campana" style="display:none;" class="subsection"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="subsection-title"&gt;Por campaña o proyecto puntual&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;&lt;label&gt;Valor total (COP)&lt;/label&gt;&lt;input type="text" id="val-campana" placeholder="Ej. $900.000"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="field"&gt;&lt;label&gt;Descripción&lt;/label&gt;&lt;input type="text" id="desc-campana" placeholder="Ej. Campaña encuestas 44h / 170–200 registros"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-grid" style="margin-top:1rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Forma de pago&lt;/label&gt;&lt;input type="text" id="pago" placeholder="Ej. 30 días / 60 días después de facturación"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Facturación&lt;/label&gt;&lt;select id="facturacion"&gt;&lt;option&gt;Mensual&lt;/option&gt;&lt;option&gt;Por hito&lt;/option&gt;&lt;option&gt;Al inicio del proyecto&lt;/option&gt;&lt;option&gt;Única&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-grid single"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Beneficios comerciales negociados &lt;span class="tag-opt"&gt;opcional&lt;/span&gt;&lt;/label&gt;&lt;textarea id="beneficios-com" placeholder="Ej: 12 meses por 11 pagos / Implementación sin costo / 30h consultoría incluidas / SMS básicos incluidos..." style="min-height:56px;"&gt;&lt;/textarea&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Notas adicionales sobre la inversión &lt;span class="tag-opt"&gt;opcional&lt;/span&gt;&lt;/label&gt;&lt;input type="text" id="notas-inv" placeholder="Ej. Los valores no incluyen IVA. Las horas adicionales fuera del alcance se cobran por separado."&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-row"&gt;&lt;button class="btn-secondary" onclick="goStep(2)"&gt;← Atrás&lt;/button&gt;&lt;button class="btn-primary" onclick="goStep(4)"&gt;Siguiente →&lt;/button&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- P4 EXTRAS --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="panel" id="panel-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-title"&gt;Servicios adicionales&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-desc"&gt;Soporte y servicios de valor agregado incluidos en esta propuesta&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="subsection"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="subsection-title"&gt;Soporte incluido en el plan&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="checkbox-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="sop-tecnico" checked&gt; Soporte técnico L-V 8am–5pm&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="sop-ejecutivo" checked&gt; Ejecutivo de cuenta dedicado&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="sop-capacitacion" checked&gt; Capacitación continua&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="sop-dashboard"&gt; Dashboard de reportería&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="sop-monitoreo"&gt; Monitoreo activo del servicio&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="sop-24h"&gt; Hasta 24h mensuales de optimización&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="subsection"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="subsection-title"&gt;Servicios de valor agregado &lt;span class="tag-opt"&gt;si aplica&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="checkbox-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="va-plantillas"&gt; Diseño de plantillas personalizadas&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="va-limpieza"&gt; Limpieza y reputación de sender&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="va-migracion"&gt; Migración de datos o plantillas&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="va-guias"&gt; Guías digitales certificadas&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="va-almacenamiento"&gt; Almacenamiento online 24/7&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="va-qr"&gt; Botones de pago / QR en plantillas&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="va-pruebas"&gt; Pruebas ante ente regulador (DIAN)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="va-produccion"&gt; Puesta en producción incluida&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field" style="margin-top:8px;"&gt;&lt;label&gt;Otros servicios incluidos &lt;span class="tag-opt"&gt;opcional&lt;/span&gt;&lt;/label&gt;&lt;input type="text" id="otros-servicios" placeholder="Ej. Laboratorio WhatsApp, consultoría sin costo, acceso a equipo de diseño..."&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-row"&gt;&lt;button class="btn-secondary" onclick="goStep(3)"&gt;← Atrás&lt;/button&gt;&lt;button class="btn-primary" onclick="goStep(5)"&gt;Siguiente →&lt;/button&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- P5 FASES --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="panel" id="panel-5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-title"&gt;Fases y cronograma&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-desc"&gt;Se cargan automáticamente según la línea seleccionada. Edita según el cliente.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="fases-container"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="add-btn" onclick="addFase()"&gt;+ Agregar fase&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-grid" style="margin-top:1.25rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Fecha de inicio estimada&lt;/label&gt;&lt;input type="text" id="fecha-inicio" placeholder="Ej. 01-04-2026"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Tiempo total estimado&lt;/label&gt;&lt;input type="text" id="tiempo-total" placeholder="Ej. 2–3 semanas desde aprobación"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-grid single"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Próximos pasos para cerrar el negocio &lt;span class="tag-opt"&gt;opcional&lt;/span&gt;&lt;/label&gt;&lt;textarea id="proximos-pasos" placeholder="Ej. 1. Reunión de validación. 2. Aprobación y firma. 3. Kick-off con equipos." style="min-height:60px;"&gt;&lt;/textarea&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-row"&gt;&lt;button class="btn-secondary" onclick="goStep(4)"&gt;← Atrás&lt;/button&gt;&lt;button class="btn-primary" onclick="goStep(6)"&gt;Siguiente →&lt;/button&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- P6 TÉRMINOS --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="panel" id="panel-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-title"&gt;Términos de la oferta&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-desc"&gt;Condiciones comerciales estándar — ajusta según la negociación&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="terminos-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Vigencia de la oferta&lt;/label&gt;&lt;input type="text" id="vig-oferta" value="15 días hábiles"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Fecha de inicio del servicio&lt;/label&gt;&lt;input type="text" id="inicio-servicio" placeholder="Ej. 01-04-2026 / Una vez aprobada la propuesta"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Suspensión por mora&lt;/label&gt;&lt;input type="text" id="mora" value="Mora superior a 30 días"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Incremento tarifario anual&lt;/label&gt;&lt;input type="text" id="incremento" value="IPC del año correspondiente"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="subsection" style="margin-top:1rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="subsection-title"&gt;Condiciones estándar a incluir&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="checkbox-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-iva" checked&gt; Valores no incluyen IVA&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-propiedad" checked&gt; Propiedad intelectual: Computec&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-datos" checked&gt; Titularidad de datos: del cliente&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-renovacion" checked&gt; Renovación automática (aviso 30 días)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-terminacion" checked&gt; Cláusula de terminación anticipada&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-fuerza" checked&gt; Exoneración por fuerza mayor&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-ley" checked&gt; Ley colombiana / Bogotá D.C.&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-ajustes" checked&gt; Ajustes de alcance se cotizan aparte&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-1581" checked&gt; Cumplimiento Ley 1581&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-escala"&gt; Escalabilidad automática de consumo&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="check-item"&gt;&lt;input type="checkbox" id="t-pruebas"&gt; Requiere etapa de pruebas del cliente&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-grid single" style="margin-top:1rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="field"&gt;&lt;label&gt;Condiciones especiales de esta negociación &lt;span class="tag-opt"&gt;opcional&lt;/span&gt;&lt;/label&gt;&lt;textarea id="obs-adicionales" placeholder="Ej. Las horas adicionales fuera del alcance se costearán con el formato de requerimientos histórico." style="min-height:56px;"&gt;&lt;/textarea&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-row"&gt;&lt;button class="btn-secondary" onclick="goStep(5)"&gt;← Atrás&lt;/button&gt;&lt;button class="btn-primary" onclick="buildPreview()"&gt;Ver vista previa →&lt;/button&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- P7 VISTA PREVIA --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="panel" id="panel-7"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-title"&gt;Vista previa&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-desc"&gt;Revisa el resumen antes de generar el prompt para Gemini&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="preview-doc" id="preview-container"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-row"&gt;&lt;button class="btn-secondary" onclick="goStep(6)"&gt;← Editar&lt;/button&gt;&lt;button class="btn-primary" onclick="buildPrompt()"&gt;Generar prompt →&lt;/button&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- P8 GENERAR --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="panel" id="panel-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-title"&gt;Generar propuesta&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-desc"&gt;Gemini redacta la propuesta completa automáticamente — solo haz clic en el botón&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="gen-inicial"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="info-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="info-box-title"&gt;¿Cómo funciona?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="info-box-steps"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>1. Haz clic en &lt;strong&gt;Generar propuesta&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>2. Gemini redacta la propuesta completa en segundos&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>3. Revisa el resultado en pantalla&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>4. Haz clic en &lt;strong&gt;Abrir en Google Docs&lt;/strong&gt; y listo</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="text-align:center;padding:1.5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="btn-primary" style="font-size:15px;padding:14px 36px;" onclick="generarPropuesta()"&gt;Generar propuesta con Gemini&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="gen-loading" style="display:none;text-align:center;padding:2rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="width:44px;height:44px;border:3px solid #e0e8e3;border-top-color:#13C37A;border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 1rem;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p style="font-size:14px;color:#5a7a6a;"&gt;Gemini está redactando la propuesta...&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="gen-resultado" style="display:none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:8px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="font-size:13px;font-weight:700;color:#0a7a4a;"&gt;Propuesta generada&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="display:flex;gap:8px;flex-wrap:wrap;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button class="copy-btn" id="copy-result-btn" onclick="copiarResultado()"&gt;Copiar texto completo&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button class="btn-primary" onclick="abrirGoogleDocs()"&gt;Abrir en Google Docs&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button class="btn-secondary" onclick="goStep(7)"&gt;← Editar datos&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="resultado-propuesta" style="background:#fff;border:1px solid #e0e8e3;border-radius:10px;padding:2rem;font-size:13px;line-height:1.8;color:#001D21;max-height:600px;overflow-y:auto;white-space:pre-wrap;font-family:'DM Sans',Arial,sans-serif;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="margin-top:1rem;padding:0.75rem 1rem;background:#f9fdf9;border-radius:8px;border:1px solid #e0e8e3;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="font-size:12px;color:#5a7a6a;"&gt;Revisa los datos antes de enviar al cliente. Los valores de inversión son los que ingresaste — Gemini no los modifica.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="gen-error" style="display:none;padding:1rem 1.25rem;background:#fff0f0;border:1px solid #f0c0c0;border-radius:10px;color:#d04040;font-size:13px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;strong&gt;Error al conectar con Gemini.&lt;/strong&gt; Verifica que la API Key esté correctamente configurada en el archivo y vuelve a intentarlo.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="margin-top:10px;"&gt;&lt;button class="btn-secondary" onclick="reintentar()"&gt;Reintentar&lt;/button&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">let lineaSelected='';</p>
+<p class="p1">let subSelected='';</p>
+<p class="p1">let fases=[];</p>
+<p class="p1">let itemsU=[];</p>
+<p class="p2"><br></p>
+<p class="p1">const lNombre={conv:'Crecimiento Conversacional',com:'Comunicaciones Conectadas',doc:'Documentos Inteligentes'};</p>
+<p class="p2"><br></p>
+<p class="p1">const fasesD={</p>
+<p class="p1"><span class="Apple-converted-space">  </span>conv:[</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{n:'Kick-off y alineación estratégica',d:'1 semana'},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{n:'Configuración y parametrización del agente',d:'1 semana'},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{n:'Pruebas de calidad y validación (UAT)',d:'3–5 días'},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{n:'Puesta en producción y estabilización',d:'3–5 días'},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{n:'Operación continua y mejora permanente',d:'Mensual recurrente'}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>],</p>
+<p class="p1"><span class="Apple-converted-space">  </span>com:[</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{n:'Diagnóstico y planificación',d:'1 semana'},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{n:'Implementación y configuración de plataformas',d:'1–2 semanas'},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{n:'Personalización de plantillas y flujos',d:'1 semana'},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{n:'Pruebas, ajustes y validación con el cliente',d:'3–5 días'},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{n:'Capacitación y lanzamiento',d:'3–5 días'},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{n:'Operación y mejora continua',d:'Permanente'}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>],</p>
+<p class="p1"><span class="Apple-converted-space">  </span>doc:[</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{n:'Levantamiento de requerimientos técnicos y funcionales',d:'1 semana'},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{n:'Diseño y configuración de la solución / mapper',d:'1–2 semanas'},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{n:'Pruebas funcionales y de estructura',d:'3–5 días'},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{n:'Validación ante ente regulador (si aplica)',d:'3–5 días'},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{n:'Puesta en producción',d:'2–3 días'},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{n:'Operación y soporte continuo',d:'Permanente'}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>]</p>
+<p class="p1">};</p>
+<p class="p2"><br></p>
+<p class="p1">function goStep(n){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('.panel').forEach(p=&gt;p.classList.remove('active'));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('.step-pill').forEach(p=&gt;{p.classList.remove('active','done');});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('panel-'+n).classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('pill-'+n).classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>for(let i=1;i&lt;n;i++) document.getElementById('pill-'+i).classList.add('done');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('progress').style.width=(n/8*100)+'%';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>window.scrollTo({top:0,behavior:'smooth'});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function selLinea(el,l){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('.linea-card').forEach(c=&gt;c.classList.remove('selected'));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>el.classList.add('selected');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>lineaSelected=l;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>subSelected='';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>['conv','com','doc'].forEach(x=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const d=document.getElementById('sub-'+x);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(d) d.style.display='none';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const target=document.getElementById('sub-'+l);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(target) target.style.display='block';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('alcance-extra').style.display='block';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(fasesD[l]){fases=fasesD[l].map(f=&gt;({n:f.n,d:f.d}));renderFases();}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function selSub(el,nombre){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('.sub-card').forEach(c=&gt;c.classList.remove('selected'));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>el.classList.add('selected');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>subSelected=nombre;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function togInv(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>['onetime','horas','recurrente','unitario','campana'].forEach(t=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const cb=document.getElementById('tipo-'+t);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const dv=document.getElementById('inv-'+t);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(cb&amp;&amp;dv) dv.style.display=cb.checked?'block':'none';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function addItem(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const idx=itemsU.length;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>itemsU.push({c:'',r:'',v:''});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const cont=document.getElementById('items-unitarios');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const d=document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>d.style.cssText='display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:8px;margin-bottom:8px;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>d.innerHTML=`&lt;input type="text" placeholder="Concepto (Ej. Email / SMS básico / Procesamiento)" oninput="itemsU[${idx}].c=this.value" style="font-size:12px;padding:7px 10px;border-radius:8px;border:1.5px solid #d0ddd5;color:#001D21;"&gt;</p>
+<p class="p1">&lt;input type="text" placeholder="Rango" oninput="itemsU[${idx}].r=this.value" style="font-size:12px;padding:7px 10px;border-radius:8px;border:1.5px solid #d0ddd5;color:#001D21;"&gt;</p>
+<p class="p1">&lt;input type="text" placeholder="Valor" oninput="itemsU[${idx}].v=this.value" style="font-size:12px;padding:7px 10px;border-radius:8px;border:1.5px solid #d0ddd5;color:#001D21;"&gt;</p>
+<p class="p1">&lt;button onclick="this.parentElement.remove();" style="padding:7px 10px;border-radius:8px;border:1.5px solid #d0ddd5;background:#f5f7f5;color:#5a7a6a;cursor:pointer;font-size:12px;"&gt;✕&lt;/button&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>cont.appendChild(d);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function renderFases(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const c=document.getElementById('fases-container');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>c.innerHTML='';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>fases.forEach((f,i)=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const d=document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>d.className='fase-item';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>d.innerHTML=`&lt;input type="text" placeholder="Nombre de la fase" value="${f.n}" oninput="fases[${i}].n=this.value" style="font-size:13px;padding:8px 11px;border-radius:8px;border:1.5px solid #d0ddd5;color:#001D21;"&gt;</p>
+<p class="p1">&lt;input type="text" placeholder="Duración" value="${f.d}" oninput="fases[${i}].d=this.value" style="font-size:13px;padding:8px 11px;border-radius:8px;border:1.5px solid #d0ddd5;color:#001D21;"&gt;</p>
+<p class="p1">&lt;button class="fase-del" onclick="rmFase(${i})"&gt;✕&lt;/button&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>c.appendChild(d);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function addFase(){fases.push({n:'',d:''});renderFases();}</p>
+<p class="p1">function rmFase(i){fases.splice(i,1);renderFases();}</p>
+<p class="p1">function v(id){return(document.getElementById(id)||{}).value||'';}</p>
+<p class="p1">function ch(id){const el=document.getElementById(id);return el?el.checked:false;}</p>
+<p class="p2"><br></p>
+<p class="p1">function getCanales(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const r=[];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const l=lineaSelected;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(l==='conv'){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(ch('c-conv-wa'))r.push('WhatsApp Business');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(ch('c-conv-voz'))r.push('Voz (escalamiento humano)');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(ch('c-conv-sms'))r.push('SMS (notificaciones)');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} else if(l==='com'){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(ch('c-com-wa'))r.push('WhatsApp Business');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(ch('c-com-voz'))r.push('Voz / llamadas');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(ch('c-com-video'))r.push('Videollamadas');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(ch('c-com-sms'))r.push('SMS');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(ch('c-com-email'))r.push('Email / correo');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} else if(l==='doc'){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(ch('c-doc-email'))r.push('Email / correo');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(ch('c-doc-sms'))r.push('SMS');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(ch('c-doc-fisico'))r.push('Físico (impresión)');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(ch('c-doc-portal'))r.push('Portal web / consulta online');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return r;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function getInv(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const r=[];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('tipo-onetime')&amp;&amp;v('val-onetime')) r.push({l:'One Time — Implementación'+(v('desc-onetime')?' ('+v('desc-onetime')+')':''),val:v('val-onetime')});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('tipo-horas')&amp;&amp;v('horas-proy')) r.push({l:'Horas de ingeniero: '+v('horas-proy')+' h × '+v('valor-hora-proy')+(v('desc-horas')?' — '+v('desc-horas'):''),val:v('val-total-horas')||'Ver detalle'});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('tipo-recurrente')&amp;&amp;v('val-mensual')) r.push({l:'Recurrencia mensual'+(v('nombre-plan')?' — '+v('nombre-plan'):'')+(v('desc-plan')?' ('+v('desc-plan')+')':''),val:v('val-mensual')+'/mes'});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('tipo-campana')&amp;&amp;v('val-campana')) r.push({l:'Proyecto / campaña'+(v('desc-campana')?' — '+v('desc-campana'):''),val:v('val-campana')});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('tipo-unitario')) itemsU.filter(i=&gt;i.c).forEach(i=&gt;r.push({l:i.c+(i.r?' ('+i.r+')':''),val:i.v}));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return r;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function buildPreview(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>goStep(7);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const emp=v('empresa')||'[Empresa]';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const con=v('contacto')||'[Contacto]';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const car=v('cargo');const com=v('comercial');const sec=v('sector');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const inv=getInv();const canales=getCanales();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const sops=[];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('sop-tecnico'))sops.push('Soporte técnico L-V 8am–5pm');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('sop-ejecutivo'))sops.push('Ejecutivo de cuenta dedicado');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('sop-capacitacion'))sops.push('Capacitación continua');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('sop-dashboard'))sops.push('Dashboard de reportería');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('sop-monitoreo'))sops.push('Monitoreo activo');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('sop-24h'))sops.push('Hasta 24h mensuales de optimización');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const fH=fases.filter(f=&gt;f.n).map((f,i)=&gt;`&lt;li&gt;&lt;strong&gt;Fase ${i+1}:&lt;/strong&gt; ${f.n} &lt;span style="color:#5a7a6a;"&gt;(${f.d})&lt;/span&gt;&lt;/li&gt;`).join('');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const iH=inv.length?inv.map(i=&gt;`&lt;tr&gt;&lt;td&gt;${i.l}&lt;/td&gt;&lt;td&gt;&lt;strong&gt;${i.val}&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;`).join(''):'&lt;tr&gt;&lt;td colspan="2" style="color:#5a7a6a;"&gt;Sin valores ingresados&lt;/td&gt;&lt;/tr&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('preview-container').innerHTML=`</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="preview-tag"&gt;Propuesta Computec · ${new Date().toLocaleDateString('es-CO',{year:'numeric',month:'long',day:'numeric'})}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;${subSelected||lNombre[lineaSelected]||'[Solución]'}&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:#5a7a6a;font-size:12px;margin-bottom:1rem;"&gt;Línea: ${lNombre[lineaSelected]||'—'} · Para: ${emp}${sec?' · '+sec:''}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;table class="mt"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Cliente&lt;/td&gt;&lt;td&gt;${emp}&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Contacto&lt;/td&gt;&lt;td&gt;${con}${car?' — '+car:''}&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Comercial Computec&lt;/td&gt;&lt;td&gt;${com}&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Línea de solución&lt;/td&gt;&lt;td&gt;${lNombre[lineaSelected]||'—'}&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Solución específica&lt;/td&gt;&lt;td&gt;${subSelected||'—'}&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${canales.length?`&lt;tr&gt;&lt;td&gt;Canales&lt;/td&gt;&lt;td&gt;${canales.join(' · ')}&lt;/td&gt;&lt;/tr&gt;`:''}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Vigencia oferta&lt;/td&gt;&lt;td&gt;${v('vig-oferta')}&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Necesidad del cliente&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;${v('contexto')||'(sin descripción)'}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>${v('piloto')?`&lt;p&gt;&lt;strong&gt;Antecedente:&lt;/strong&gt; ${v('piloto')}&lt;/p&gt;`:''}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Inversión&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;table class="it"&gt;&lt;tr&gt;&lt;th&gt;Concepto&lt;/th&gt;&lt;th&gt;Valor&lt;/th&gt;&lt;/tr&gt;${iH}&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="font-size:11px;color:#5a7a6a;"&gt;Valores sin IVA · Pago: ${v('pago')||'30 días'} · Facturación: ${v('facturacion')}${v('vigencia')?' · Vigencia: '+v('vigencia'):''}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>${v('beneficios-com')?`&lt;h2&gt;Beneficios comerciales&lt;/h2&gt;&lt;p&gt;${v('beneficios-com')}&lt;/p&gt;`:''}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Cronograma&lt;/h2&gt;&lt;ul&gt;${fH||'&lt;li&gt;Sin fases definidas&lt;/li&gt;'}&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>${v('fecha-inicio')?`&lt;p&gt;Inicio: &lt;strong&gt;${v('fecha-inicio')}&lt;/strong&gt;${v('tiempo-total')?' · Duración: '+v('tiempo-total'):''}&lt;/p&gt;`:''}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Soporte incluido&lt;/h2&gt;&lt;ul&gt;${sops.map(s=&gt;`&lt;li&gt;${s}&lt;/li&gt;`).join('')||'&lt;li&gt;Ver términos del contrato&lt;/li&gt;'}&lt;/ul&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">const GEMINI_API_KEY = 'TU_API_KEY_AQUI';</p>
+<p class="p1">let propuestaGenerada = '';</p>
+<p class="p2"><br></p>
+<p class="p1">function buildPromptText(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const emp=v('empresa')||'[Empresa cliente]';const sec=v('sector');const con=v('contacto');const car=v('cargo');const com=v('comercial');const ema=v('emailcomercial');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const ctx=v('contexto');const pil=v('piloto');const alc=v('alcance');const ben=v('beneficios');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const pag=v('pago');const fac=v('facturacion');const vig=v('vigencia');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const vigO=v('vig-oferta');const iniS=v('inicio-servicio');const mor=v('mora');const inc=v('incremento');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const obs=v('obs-adicionales');const fIni=v('fecha-inicio');const tTot=v('tiempo-total');const prox=v('proximos-pasos');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const benC=v('beneficios-com');const notI=v('notas-inv');const otS=v('otros-servicios');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const canales=getCanales();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const va=[];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('va-plantillas'))va.push('Diseño de plantillas de email personalizadas');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('va-limpieza'))va.push('Diagnóstico y limpieza de reputación de sender');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('va-migracion'))va.push('Migración de datos y plantillas existentes');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('va-guias'))va.push('Guías digitales certificadas con validez legal');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('va-almacenamiento'))va.push('Almacenamiento online con acceso 24/7');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('va-qr'))va.push('Botones de pago y códigos QR en plantillas');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('va-pruebas'))va.push('Pruebas ante ente regulador (DIAN)');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('va-produccion'))va.push('Puesta en producción incluida en el alcance');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(otS)va.push(otS);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const sops=[];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('sop-tecnico'))sops.push('Soporte técnico L-V 8am–5pm');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('sop-ejecutivo'))sops.push('Ejecutivo de cuenta dedicado');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('sop-capacitacion'))sops.push('Capacitación continua');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('sop-dashboard'))sops.push('Dashboard de reportería y métricas');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('sop-monitoreo'))sops.push('Monitoreo activo del servicio');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('sop-24h'))sops.push('Hasta 24h mensuales de optimización');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const terms=[];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('t-iva'))terms.push('Los valores presentados no incluyen IVA');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('t-propiedad'))terms.push('La propiedad intelectual de la configuración y arquitectura tecnológica es exclusiva de Computec');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('t-datos'))terms.push('El cliente mantiene la titularidad total de sus datos');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('t-renovacion')&amp;&amp;vig)terms.push('Vigencia: '+vig+', con renovación automática si ninguna de las partes manifiesta lo contrario con mínimo 30 días de anticipación');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('t-terminacion'))terms.push('En caso de terminación anticipada, el cliente deberá cumplir con el período mínimo contratado');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('t-ajustes'))terms.push('Cambios de alcance o reglas adicionales se cotizan adicionalmente con el formato de requerimientos establecido');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('t-fuerza'))terms.push('Computec no será responsable por fallas de fuerza mayor ajenas a su control');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('t-ley'))terms.push('Ley aplicable: República de Colombia. Jurisdicción: Bogotá D.C.');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('t-1581'))terms.push('El servicio se prestará en cumplimiento de la Ley 1581 de Protección de Datos Personales');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('t-escala'))terms.push('Si se supera el rango del plan contratado, se aplicará automáticamente el rango siguiente');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ch('t-pruebas'))terms.push('El inicio en producción requiere la aprobación formal de la etapa de pruebas por parte del cliente');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(mor)terms.push('Suspensión por mora: '+mor);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(inc)terms.push('Incremento tarifario anual: '+inc);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const inv=getInv();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const invT=inv.length?inv.map(i=&gt;`<span class="Apple-converted-space">  </span>- ${i.l}: ${i.val}`).join('\n'):'<span class="Apple-converted-space">  </span>A definir con el cliente';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const fasT=fases.filter(f=&gt;f.n).map((f,i)=&gt;`<span class="Apple-converted-space">  </span>Fase ${i+1}: ${f.n} — ${f.d}`).join('\n');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>return `Eres el asistente comercial experto de Computec Outsourcing S.A.S. Genera una propuesta comercial completa, profesional y persuasiva en español. Usa formato de texto plano con separadores claros — NO uses Markdown con asteriscos, no uses #. Usa MAYÚSCULAS para títulos de sección y guiones para listas. No inventes datos ni precios no proporcionados.</p>
+<p class="p2"><br></p>
+<p class="p1">DATOS DEL CLIENTE:</p>
+<p class="p1">Empresa: ${emp}</p>
+<p class="p1">${sec?'Sector: '+sec:''}</p>
+<p class="p1">Contacto: ${con}${car?' — '+car:''}</p>
+<p class="p1">Comercial Computec: ${com}${ema?' — '+ema:''}</p>
+<p class="p1">Fecha: ${new Date().toLocaleDateString('es-CO',{year:'numeric',month:'long',day:'numeric'})}</p>
+<p class="p2"><br></p>
+<p class="p1">CONTEXTO Y NECESIDAD:</p>
+<p class="p1">${ctx||'[Describir necesidad del cliente]'}</p>
+<p class="p1">${pil?'\nANTECEDENTE / PROYECTO PREVIO:\n'+pil:''}</p>
+<p class="p2"><br></p>
+<p class="p1">SOLUCIÓN PROPUESTA:</p>
+<p class="p1">Línea Computec: ${lNombre[lineaSelected]||'[Línea]'}</p>
+<p class="p1">Solución: ${subSelected||'[Solución específica]'}</p>
+<p class="p1">${canales.length?'Canales incluidos: '+canales.join(', '):''}</p>
+<p class="p1">${alc?'Alcance específico:\n'+alc:''}</p>
+<p class="p1">${ben?'Diferenciadores clave:\n'+ben:''}</p>
+<p class="p2"><br></p>
+<p class="p1">INVERSIÓN:</p>
+<p class="p1">${invT}</p>
+<p class="p1">Forma de pago: ${pag||'30 días'}</p>
+<p class="p1">Facturación: ${fac}</p>
+<p class="p1">${benC?'Beneficios comerciales: '+benC:''}</p>
+<p class="p1">${notI?'Notas: '+notI:''}</p>
+<p class="p2"><br></p>
+<p class="p1">SOPORTE INCLUIDO:</p>
+<p class="p1">${sops.map(s=&gt;'- '+s).join('\n')||'Ver términos del contrato'}</p>
+<p class="p1">${va.length?'\nSERVICIOS Y VALOR AGREGADO:\n'+va.map(s=&gt;'- '+s).join('\n'):''}</p>
+<p class="p2"><br></p>
+<p class="p1">CRONOGRAMA:</p>
+<p class="p1">${fIni?'Fecha de inicio: '+fIni:''}</p>
+<p class="p1">${tTot?'Tiempo total: '+tTot:''}</p>
+<p class="p1">${fasT?'FASES:\n'+fasT:''}</p>
+<p class="p1">${prox?'\nPRÓXIMOS PASOS:\n'+prox:''}</p>
+<p class="p2"><br></p>
+<p class="p1">TÉRMINOS:</p>
+<p class="p1">Vigencia de la oferta: ${vigO||'15 días hábiles'}</p>
+<p class="p1">${iniS?'Inicio del servicio: '+iniS:''}</p>
+<p class="p1">${terms.map(t=&gt;'- '+t).join('\n')}</p>
+<p class="p1">${obs?'\nCONDICIONES ESPECIALES:\n'+obs:''}</p>
+<p class="p2"><br></p>
+<p class="p1">INSTRUCCIONES DE ESTRUCTURA:</p>
+<p class="p1">Genera la propuesta completa con este orden exacto. Usa texto plano, sin Markdown, sin asteriscos. Separa secciones con una línea en blanco y el título en MAYÚSCULAS.</p>
+<p class="p2"><br></p>
+<p class="p1">1. ENCABEZADO con tabla de datos: Fecha, Versión (1.0), Vigencia de oferta, Código propuesta (formato COT-[iniciales empresa]-[mes][año]), Preparado para, Preparado por, Contacto, Descripción del servicio.</p>
+<p class="p2"><br></p>
+<p class="p1">2. Título grande: "Vamos a hacerlo más simple, más eficiente" y subtítulo "Soluciones inteligentes para optimizar comunicaciones y documentos"</p>
+<p class="p2"><br></p>
+<p class="p1">3. CONTEXTO Y DIAGNÓSTICO: 2-3 párrafos conectando con la necesidad real del cliente.</p>
+<p class="p2"><br></p>
+<p class="p1">4. SOLUCIÓN PROPUESTA: Descripción completa de la solución, canales y qué resuelve.</p>
+<p class="p2"><br></p>
+<p class="p1">5. PARA QUÉ LO HACEMOS: 5-6 beneficios con título en mayúsculas y descripción de 1-2 líneas.</p>
+<p class="p2"><br></p>
+<p class="p1">6. CÓMO LO VAMOS A HACER - METODOLOGÍA: Fases con nombre, duración y actividades clave.</p>
+<p class="p2"><br></p>
+<p class="p1">7. DETALLES TÉCNICOS: Lista de especificaciones técnicas, integraciones y seguridad con marca de aplica/no aplica.</p>
+<p class="p2"><br></p>
+<p class="p1">8. SOPORTE Y ACOMPAÑAMIENTO: Lista con los elementos incluidos.</p>
+<p class="p2"><br></p>
+<p class="p1">9. INVERSIÓN: Tabla con todos los conceptos y valores. Nota al pie: valores sin IVA.</p>
+<p class="p2"><br></p>
+<p class="p1">10. TÉRMINOS DE LA OFERTA: Lista con todos los términos.</p>
+<p class="p2"><br></p>
+<p class="p1">11. PRÓXIMOS PASOS: Lista numerada de 4 pasos.</p>
+<p class="p2"><br></p>
+<p class="p1">12. POR QUÉ COMPUTEC: +56 años de experiencia, grupo TLP, sectores atendidos.</p>
+<p class="p2"><br></p>
+<p class="p1">13. AGRADECIMIENTO: Párrafo final con nombre y datos del comercial.</p>
+<p class="p2"><br></p>
+<p class="p1">14. SECCIÓN DE APROBACIÓN: Tabla con campos de firma.</p>
+<p class="p2"><br></p>
+<p class="p1">TONO: Profesional, consultivo y cercano. Español colombiano. Frases clave: "Vamos a hacerlo más simple, más eficiente", "Nuestro compromiso no termina con la implementación".`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">async function generarPropuesta(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(GEMINI_API_KEY==='AIzaSyD8C2aqCb2mpgpQ_zH8jB_XYNfL5DsW3M8'){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>alert('Configura tu API Key de Gemini en el archivo antes de continuar.');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('gen-inicial').style.display='none';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('gen-loading').style.display='block';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('gen-resultado').style.display='none';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('gen-error').style.display='none';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>try{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const prompt=buildPromptText();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const response=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`,{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>method:'POST',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>headers:{'Content-Type':'application/json'},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>body:JSON.stringify({</p>
+<p class="p1"><span class="Apple-converted-space">        </span>contents:[{parts:[{text:prompt}]}],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>generationConfig:{temperature:0.7,maxOutputTokens:8192}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>})</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(!response.ok) throw new Error('Error API: '+response.status);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const data=await response.json();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const texto=data.candidates?.[0]?.content?.parts?.[0]?.text||'';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(!texto) throw new Error('Sin respuesta');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>propuestaGenerada=texto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('resultado-propuesta').textContent=texto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('gen-loading').style.display='none';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('gen-resultado').style.display='block';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} catch(e){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('gen-loading').style.display='none';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('gen-error').style.display='block';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>console.error(e);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function reintentar(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('gen-error').style.display='none';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('gen-inicial').style.display='block';</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function copiarResultado(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>navigator.clipboard.writeText(propuestaGenerada).then(()=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const btn=document.getElementById('copy-result-btn');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn.textContent='¡Copiado!';btn.classList.add('copied');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>setTimeout(()=&gt;{btn.textContent='Copiar texto completo';btn.classList.remove('copied');},2500);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}).catch(()=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const el=document.getElementById('resultado-propuesta');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const range=document.createRange();range.selectNode(el);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>window.getSelection().removeAllRanges();window.getSelection().addRange(range);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.execCommand('copy');window.getSelection().removeAllRanges();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const btn=document.getElementById('copy-result-btn');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn.textContent='¡Copiado!';btn.classList.add('copied');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>setTimeout(()=&gt;{btn.textContent='Copiar texto completo';btn.classList.remove('copied');},2500);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function abrirGoogleDocs(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>copiarResultado();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>setTimeout(()=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>window.open('https://docs.new','_blank');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>setTimeout(()=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>alert('Google Docs ya está abierto. Pega el texto con Ctrl+V (Windows) o Cmd+V (Mac).');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},1500);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>},300);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function buildPrompt(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>goStep(8);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('gen-inicial').style.display='block';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('gen-loading').style.display='none';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('gen-resultado').style.display='none';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('gen-error').style.display='none';</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function copyText(sourceId,btnId,originalText){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const text=document.getElementById(sourceId).textContent;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>navigator.clipboard.writeText(text).then(()=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const btn=document.getElementById(btnId);btn.textContent='¡Copiado!';btn.classList.add('copied');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>setTimeout(()=&gt;{btn.textContent=originalText;btn.classList.remove('copied');},2500);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}).catch(()=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const el=document.getElementById(sourceId);const range=document.createRange();range.selectNode(el);window.getSelection().removeAllRanges();window.getSelection().addRange(range);document.execCommand('copy');window.getSelection().removeAllRanges();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const btn=document.getElementById(btnId);btn.textContent='¡Copiado!';btn.classList.add('copied');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>setTimeout(()=&gt;{btn.textContent=originalText;btn.classList.remove('copied');},2500);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">renderFases();</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
